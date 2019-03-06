@@ -1,0 +1,14 @@
+{
+  "presets": ["env", "stage-0", "react"],
+  "plugins": [
+    [
+      "transform-runtime",
+      {
+        "polyfill": false,
+        "regenerator": true
+      }
+    ],
+    "transform-class-properties",
+    "styled-components"
+  ]
+}
