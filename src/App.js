@@ -1,17 +1,31 @@
 import React from "react";
-import { Title } from "./common/ui";
+import { Title, Container, List, Item, GameTitle } from "./common/ui";
 import games from "./api/games";
+
+const Game = ({ game }) => {
+  return (
+    <Item>
+      <GameTitle>{game.name}</GameTitle>
+    </Item>
+  );
+};
+
+const GameList = () => {
+  return (
+    <List>
+      {games.map(game => (
+        <Game key={game.id} game={game} />
+      ))}
+    </List>
+  );
+};
 
 const App = () => {
   return (
-    <div>
+    <Container>
       <Title>Your Games</Title>
-      <ul>
-        {games.map(game => (
-          <li key={game.id}>{game.name}</li>
-        ))}
-      </ul>
-    </div>
+      <GameList />
+    </Container>
   );
 };
 

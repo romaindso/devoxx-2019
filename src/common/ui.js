@@ -1,8 +1,28 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-  font-size: 24px;
-`
+  font-size: 32px;
+`;
+
+export const List = styled.ul`
+  margin: 0;
+  padding: 0px;
+`;
+
+export const Item = styled.li`
+  list-style-type: none;
+  background: white;
+  color: #24a29a;
+  padding: 10px;
+  margin: 0px 0px 5px;
+`;
+
+export const Container = styled.div`
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
 
 export const Center = styled.div`
   text-align: center;
@@ -13,22 +33,6 @@ export const Center = styled.div`
   justify-content: center;
 `;
 
-export const Nav = styled.nav`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  background-color: black;
-`;
-
-export const NavLink = styled.span`
-  background-color: ${props => (props.isActive ? "white" : "#c4c4c4")};
-  padding: 10px 5px;
-  color: black;
-  margin: 0 20px;
-
-  &:hover {
-    cursor: pointer;
-    background-color: white;
-  }
+export const GameTitle = styled.h1`
+  font-size: 24px;
 `;

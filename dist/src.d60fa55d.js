@@ -29635,7 +29635,7 @@ exports.__DO_NOT_USE_OR_YOU_WILL_BE_HAUNTED_BY_SPOOKY_GHOSTS = __DO_NOT_USE_OR_Y
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.NavLink = exports.Nav = exports.Center = exports.Title = undefined;
+exports.GameTitle = exports.Center = exports.Container = exports.Item = exports.List = exports.Title = undefined;
 
 var _styledComponents = require("styled-components");
 
@@ -29645,21 +29645,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Title = exports.Title = _styledComponents2.default.h1.withConfig({
   displayName: "ui__Title"
-})(["font-size:24px;"]);
+})(["font-size:32px;"]);
+
+var List = exports.List = _styledComponents2.default.ul.withConfig({
+  displayName: "ui__List"
+})(["margin:0;padding:0px;"]);
+
+var Item = exports.Item = _styledComponents2.default.li.withConfig({
+  displayName: "ui__Item"
+})(["list-style-type:none;background:white;color:#24a29a;padding:10px;margin:0px 0px 5px;"]);
+
+var Container = exports.Container = _styledComponents2.default.div.withConfig({
+  displayName: "ui__Container"
+})(["margin:auto;display:flex;flex-direction:column;justify-content:center;"]);
 
 var Center = exports.Center = _styledComponents2.default.div.withConfig({
   displayName: "ui__Center"
 })(["text-align:center;display:flex;flex:1;min-height:400px;align-items:center;justify-content:center;"]);
 
-var Nav = exports.Nav = _styledComponents2.default.nav.withConfig({
-  displayName: "ui__Nav"
-})(["display:flex;justify-content:center;align-items:center;height:50px;background-color:black;"]);
-
-var NavLink = exports.NavLink = _styledComponents2.default.span.withConfig({
-  displayName: "ui__NavLink"
-})(["background-color:", ";padding:10px 5px;color:black;margin:0 20px;&:hover{cursor:pointer;background-color:white;}"], function (props) {
-  return props.isActive ? "white" : "#c4c4c4";
-});
+var GameTitle = exports.GameTitle = _styledComponents2.default.h1.withConfig({
+  displayName: "ui__GameTitle"
+})(["font-size:24px;"]);
 },{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"api/games.js":[function(require,module,exports) {
 "use strict";
 
@@ -29698,26 +29704,40 @@ var _games2 = _interopRequireDefault(_games);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var Game = function Game(_ref) {
+  var game = _ref.game;
+
+  return _react2.default.createElement(
+    _ui.Item,
+    null,
+    _react2.default.createElement(
+      _ui.GameTitle,
+      null,
+      game.name
+    )
+  );
+};
+
+var GameList = function GameList() {
+  return _react2.default.createElement(
+    _ui.List,
+    null,
+    _games2.default.map(function (game) {
+      return _react2.default.createElement(Game, { key: game.id, game: game });
+    })
+  );
+};
+
 var App = function App() {
   return _react2.default.createElement(
-    "div",
+    _ui.Container,
     null,
     _react2.default.createElement(
       _ui.Title,
       null,
       "Your Games"
     ),
-    _react2.default.createElement(
-      "ul",
-      null,
-      _games2.default.map(function (game) {
-        return _react2.default.createElement(
-          "li",
-          { key: game.id },
-          game.name
-        );
-      })
-    )
+    _react2.default.createElement(GameList, null)
   );
 };
 
