@@ -1,6 +1,24 @@
+/* @font-face {
+  font-family: "UbisoftSans";
+  src: url("dist/UbisoftSans-Bold.woff2") format("woff2"),
+    url("dist/UbisoftSans-Bold.woff") format("woff"),
+    url("dist/UbisoftSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UbisoftSans";
+  src: url("dist/UbisoftSans-Regular.woff2") format("woff2"),
+    url("dist/UbisoftSans-Regular.woff") format("woff"),
+    url("dist/UbisoftSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+} */
+
 html,
 body {
-  font-family: "Helvetica Neue", cursive;
+  font-family: "UbisoftSans", "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
   padding: 0;
   margin: 0 auto;

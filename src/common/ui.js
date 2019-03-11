@@ -35,6 +35,7 @@ export const Item = styled.li`
 
   &:hover {
     cursor: pointer;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.14);
   }
 `;
 
@@ -63,4 +64,17 @@ export const GameCover = styled.img`
   width: 128px;
   border-radius: 8px;
   margin-right: 32px;
+`;
+
+export const GamePlatform = styled.div`
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  color: white;
+  border: 1px solid white;
+  border-radius: 0.28em;
+  background: rgba(34, 34, 34, 0.4);
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.14em;
+  text-transform: uppercase;
 `;

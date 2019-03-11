@@ -31,7 +31,7 @@
   },
   "scripts": {
     "start": "parcel src/index.html --no-hmr",
-    "build": "parcel build src/index.html --public-url /devoxx-2019/",
+    "build": "parcel build src/index.html --public-url /devoxx-2019/ -d dist",
     "deploy": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
   }
 }
