@@ -1,31 +1,14 @@
 import React from "react";
-import { Title, Container, List, Item, GameTitle } from "./common/ui";
-import games from "./api/games";
-
-const Game = ({ game }) => {
-  return (
-    <Item>
-      <GameTitle>{game.name}</GameTitle>
-    </Item>
-  );
-};
-
-const GameList = () => {
-  return (
-    <List>
-      {games.map(game => (
-        <Game key={game.id} game={game} />
-      ))}
-    </List>
-  );
-};
+import { Router } from "@reach/router";
+import { Home } from "./Home";
+import { Game } from "./Game";
 
 const App = () => {
   return (
-    <Container>
-      <Title>Your Games</Title>
-      <GameList />
-    </Container>
+    <Router>
+      <Home path="/" />
+      <Game path="/games/:id" />
+    </Router>
   );
 };
 
