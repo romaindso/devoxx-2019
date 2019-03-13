@@ -39,13 +39,6 @@ export const Item = styled.li`
   }
 `;
 
-export const Container = styled.div`
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
 export const Center = styled.div`
   text-align: center;
   display: flex;
@@ -64,17 +57,4 @@ export const GameCover = styled.img`
   width: 128px;
   border-radius: 8px;
   margin-right: 32px;
-`;
-
-export const GamePlatform = styled.div`
-  display: inline-block;
-  padding: 0.25em 0.5em;
-  color: white;
-  border: 1px solid white;
-  border-radius: 0.28em;
-  background: rgba(34, 34, 34, 0.4);
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.14em;
-  text-transform: uppercase;
 `;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { fetchGame } from "./api/fetchGame";
-import { GamePlatform } from "./common/ui";
+import { fetchGame } from "../api/fetchGame";
+import { GameHeader } from "./GameHeader/";
 
 export class GameDetails extends Component {
   state = {
@@ -22,16 +22,4 @@ export class GameDetails extends Component {
     }
     return <GameHeader game={game} />;
   }
-}
-
-function GameHeader({ game }) {
-  return (
-    <div>
-      <img src={game.image_url} />
-      <h1>{game.name}</h1>
-      {game.platforms.map(platform => (
-        <GamePlatform>{platform}</GamePlatform>
-      ))}
-    </div>
-  );
 }
