@@ -17,8 +17,10 @@
 html,
 body {
   font-size: 16px;
-  padding: 0;
   margin: 0 auto;
-  max-width: 750px;
   font-family: "UbisoftSans", "Roboto", Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 0 64px;
 }

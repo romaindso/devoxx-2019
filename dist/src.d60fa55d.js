@@ -31234,13 +31234,13 @@ exports.ServerStyleSheet = ServerStyleSheet;
 exports.StyleSheetManager = StyleSheetManager;
 exports.__DO_NOT_USE_OR_YOU_WILL_BE_HAUNTED_BY_SPOOKY_GHOSTS = __DO_NOT_USE_OR_YOU_WILL_BE_HAUNTED_BY_SPOOKY_GHOSTS;
 //# sourceMappingURL=styled-components.browser.esm.js.map
-},{"stylis/stylis.min":"../node_modules/stylis/stylis.min.js","stylis-rule-sheet":"../node_modules/stylis-rule-sheet/index.js","react":"../vendor/react.development.js","@emotion/unitless":"../node_modules/@emotion/unitless/dist/unitless.browser.esm.js","react-is":"../node_modules/react-is/index.js","memoize-one":"../node_modules/memoize-one/dist/memoize-one.esm.js","prop-types":"../node_modules/prop-types/index.js","react-dom":"../vendor/react-dom.development.js","@emotion/is-prop-valid":"../node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js","process":"../node_modules/process/browser.js"}],"common/Ui.js":[function(require,module,exports) {
+},{"stylis/stylis.min":"../node_modules/stylis/stylis.min.js","stylis-rule-sheet":"../node_modules/stylis-rule-sheet/index.js","react":"../vendor/react.development.js","@emotion/unitless":"../node_modules/@emotion/unitless/dist/unitless.browser.esm.js","react-is":"../node_modules/react-is/index.js","memoize-one":"../node_modules/memoize-one/dist/memoize-one.esm.js","prop-types":"../node_modules/prop-types/index.js","react-dom":"../vendor/react-dom.development.js","@emotion/is-prop-valid":"../node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js","process":"../node_modules/process/browser.js"}],"common/ui.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.GamePlatform = exports.GameCover = exports.GameTitle = exports.Center = exports.Container = exports.Item = exports.List = exports.IconController = exports.Title = undefined;
+exports.GameCover = exports.GameTitle = exports.Center = exports.Item = exports.List = exports.IconController = exports.Container = exports.Title = undefined;
 
 var _styledComponents = require("styled-components");
 
@@ -31249,40 +31249,36 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Title = exports.Title = _styledComponents2.default.h1.withConfig({
-  displayName: "Ui__Title"
+  displayName: "ui__Title"
 })(["font-size:32px;display:flex;justify-content:center;align-items:center;"]);
 
+var Container = exports.Container = _styledComponents2.default.div.withConfig({
+  displayName: "ui__Container"
+})(["margin:auto;display:flex;flex-direction:column;justify-content:center;"]);
+
 var IconController = exports.IconController = _styledComponents2.default.img.withConfig({
-  displayName: "Ui__IconController"
+  displayName: "ui__IconController"
 })(["width:60px;margin-right:8px;"]);
 
 var List = exports.List = _styledComponents2.default.ul.withConfig({
-  displayName: "Ui__List"
+  displayName: "ui__List"
 })(["margin:0;padding:0;width:100%;& a{text-decoration:none;}"]);
 
 var Item = exports.Item = _styledComponents2.default.li.withConfig({
-  displayName: "Ui__Item"
+  displayName: "ui__Item"
 })(["list-style-type:none;background:white;color:#24a29a;padding:16px;margin:0 0 8px;display:flex;justify-content:flex-start;align-items:center;border-bottom:1px solid #eee;&:hover{cursor:pointer;box-shadow:0 0 50px rgba(0,0,0,0.14);}"]);
 
-var Container = exports.Container = _styledComponents2.default.div.withConfig({
-  displayName: "Ui__Container"
-})(["margin:auto;display:flex;flex-direction:column;justify-content:center;"]);
-
 var Center = exports.Center = _styledComponents2.default.div.withConfig({
-  displayName: "Ui__Center"
+  displayName: "ui__Center"
 })(["text-align:center;display:flex;flex-direction:column;min-height:400px;align-items:center;justify-content:center;"]);
 
 var GameTitle = exports.GameTitle = _styledComponents2.default.h1.withConfig({
-  displayName: "Ui__GameTitle"
+  displayName: "ui__GameTitle"
 })(["font-size:24px;color:#333;"]);
 
 var GameCover = exports.GameCover = _styledComponents2.default.img.withConfig({
-  displayName: "Ui__GameCover"
+  displayName: "ui__GameCover"
 })(["width:128px;border-radius:8px;margin-right:32px;"]);
-
-var GamePlatform = exports.GamePlatform = _styledComponents2.default.div.withConfig({
-  displayName: "Ui__GamePlatform"
-})(["display:inline-block;padding:0.25em 0.5em;color:white;border:1px solid white;border-radius:0.28em;background:rgba(34,34,34,0.4);font-size:16px;font-weight:bold;line-height:1.14em;text-transform:uppercase;"]);
 },{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"assets/cover/assassins-creed-odyssey.jpg":[function(require,module,exports) {
 module.exports = "/assassins-creed-odyssey.df4445ca.jpg";
 },{}],"assets/cover/the-division-2.jpg":[function(require,module,exports) {
@@ -31355,7 +31351,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _router = require("@reach/router");
 
-var _Ui = require("./common/Ui");
+var _ui = require("./common/ui");
 
 var _games = require("./api/data/games");
 
@@ -31370,11 +31366,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var GameItem = function GameItem(_ref) {
   var game = _ref.game;
   return _react2.default.createElement(
-    _Ui.Item,
+    _ui.Item,
     null,
-    _react2.default.createElement(_Ui.GameCover, { src: game.image_url }),
+    _react2.default.createElement(_ui.GameCover, { src: game.image_url }),
     _react2.default.createElement(
-      _Ui.GameTitle,
+      _ui.GameTitle,
       null,
       game.name
     )
@@ -31383,7 +31379,7 @@ var GameItem = function GameItem(_ref) {
 
 var GameList = function GameList() {
   return _react2.default.createElement(
-    _Ui.List,
+    _ui.List,
     null,
     _games2.default.map(function (game) {
       return _react2.default.createElement(
@@ -31397,22 +31393,22 @@ var GameList = function GameList() {
 
 var Home = exports.Home = function Home() {
   return _react2.default.createElement(
-    _Ui.Container,
+    _ui.Container,
     { className: "app" },
     _react2.default.createElement(
-      _Ui.Center,
+      _ui.Center,
       null,
       _react2.default.createElement(
-        _Ui.Title,
+        _ui.Title,
         null,
-        _react2.default.createElement(_Ui.IconController, { src: _icon_controller2.default }),
+        _react2.default.createElement(_ui.IconController, { src: _icon_controller2.default }),
         "Your Games"
       ),
       _react2.default.createElement(GameList, null)
     )
   );
 };
-},{"react":"../vendor/react.development.js","@reach/router":"../node_modules/@reach/router/es/index.js","./common/Ui":"common/Ui.js","./api/data/games":"api/data/games.js","./assets/others/icon_controller.png":"assets/others/icon_controller.png"}],"../node_modules/babel-runtime/helpers/classCallCheck.js":[function(require,module,exports) {
+},{"react":"../vendor/react.development.js","@reach/router":"../node_modules/@reach/router/es/index.js","./common/ui":"common/ui.js","./api/data/games":"api/data/games.js","./assets/others/icon_controller.png":"assets/others/icon_controller.png"}],"../node_modules/babel-runtime/helpers/classCallCheck.js":[function(require,module,exports) {
 "use strict";
 
 exports.__esModule = true;
@@ -31632,7 +31628,62 @@ exports.default = {
     characters: []
   }
 };
-},{"../../assets/cover/assassins-creed-odyssey.jpg":"assets/cover/assassins-creed-odyssey.jpg","../../assets/cover/the-division-2.jpg":"assets/cover/the-division-2.jpg","../../assets/cover/rainbow-six-siege.jpg":"assets/cover/rainbow-six-siege.jpg","../../assets/cover/anno-1800.jpg":"assets/cover/anno-1800.jpg","../../assets/cover/far-cry-5.jpg":"assets/cover/far-cry-5.jpg","../../assets/cover/rayman-legends.jpg":"assets/cover/rayman-legends.jpg","../../assets/cover/lapins-cretins-invasion.jpg":"assets/cover/lapins-cretins-invasion.jpg"}],"api/constants.js":[function(require,module,exports) {
+},{"../../assets/cover/assassins-creed-odyssey.jpg":"assets/cover/assassins-creed-odyssey.jpg","../../assets/cover/the-division-2.jpg":"assets/cover/the-division-2.jpg","../../assets/cover/rainbow-six-siege.jpg":"assets/cover/rainbow-six-siege.jpg","../../assets/cover/anno-1800.jpg":"assets/cover/anno-1800.jpg","../../assets/cover/far-cry-5.jpg":"assets/cover/far-cry-5.jpg","../../assets/cover/rayman-legends.jpg":"assets/cover/rayman-legends.jpg","../../assets/cover/lapins-cretins-invasion.jpg":"assets/cover/lapins-cretins-invasion.jpg"}],"assets/avatars/assassins-creed-odyssey/325_146_146.png":[function(require,module,exports) {
+module.exports = "/325_146_146.646b86c5.png";
+},{}],"assets/avatars/assassins-creed-odyssey/326_146_146.png":[function(require,module,exports) {
+module.exports = "/326_146_146.baf22764.png";
+},{}],"assets/avatars/assassins-creed-odyssey/327_146_146.png":[function(require,module,exports) {
+module.exports = "/327_146_146.d2874529.png";
+},{}],"assets/avatars/assassins-creed-odyssey/328_146_146.png":[function(require,module,exports) {
+module.exports = "/328_146_146.be7eeac8.png";
+},{}],"assets/avatars/assassins-creed-odyssey/329_146_146.png":[function(require,module,exports) {
+module.exports = "/329_146_146.928fd98f.png";
+},{}],"assets/avatars/assassins-creed-odyssey/330_146_146.png":[function(require,module,exports) {
+module.exports = "/330_146_146.66c73aab.png";
+},{}],"assets/avatars/assassins-creed-odyssey/331_146_146.png":[function(require,module,exports) {
+module.exports = "/331_146_146.a68738d8.png";
+},{}],"assets/avatars/assassins-creed-odyssey/332_146_146.png":[function(require,module,exports) {
+module.exports = "/332_146_146.af451ec1.png";
+},{}],"assets/avatars/assassins-creed-odyssey/334_146_146.png":[function(require,module,exports) {
+module.exports = "/334_146_146.1b169a63.png";
+},{}],"assets/avatars/assassins-creed-odyssey/335_146_146.png":[function(require,module,exports) {
+module.exports = "/335_146_146.1aa153c1.png";
+},{}],"api/data/games-characters.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  acodyssey: {
+    id: "acodyssey",
+    characters: [require("../../assets/avatars/assassins-creed-odyssey/325_146_146.png"), require("../../assets/avatars/assassins-creed-odyssey/326_146_146.png"), require("../../assets/avatars/assassins-creed-odyssey/327_146_146.png"), require("../../assets/avatars/assassins-creed-odyssey/328_146_146.png"), require("../../assets/avatars/assassins-creed-odyssey/329_146_146.png"), require("../../assets/avatars/assassins-creed-odyssey/330_146_146.png"), require("../../assets/avatars/assassins-creed-odyssey/331_146_146.png"), require("../../assets/avatars/assassins-creed-odyssey/332_146_146.png"), require("../../assets/avatars/assassins-creed-odyssey/334_146_146.png"), require("../../assets/avatars/assassins-creed-odyssey/335_146_146.png")]
+  },
+  thedivion2: {
+    id: "thedivion2",
+    characters: []
+  },
+  rainbowsiege: {
+    id: "rainbowsiege",
+    characters: []
+  },
+  anno1800: {
+    id: "anno1800",
+    characters: []
+  },
+  farcry5: {
+    id: "farcry5",
+    characters: []
+  },
+  raymanlegends: {
+    id: "raymanlegends",
+    characters: []
+  },
+  lapinscretins: {
+    characters: []
+  }
+};
+},{"../../assets/avatars/assassins-creed-odyssey/325_146_146.png":"assets/avatars/assassins-creed-odyssey/325_146_146.png","../../assets/avatars/assassins-creed-odyssey/326_146_146.png":"assets/avatars/assassins-creed-odyssey/326_146_146.png","../../assets/avatars/assassins-creed-odyssey/327_146_146.png":"assets/avatars/assassins-creed-odyssey/327_146_146.png","../../assets/avatars/assassins-creed-odyssey/328_146_146.png":"assets/avatars/assassins-creed-odyssey/328_146_146.png","../../assets/avatars/assassins-creed-odyssey/329_146_146.png":"assets/avatars/assassins-creed-odyssey/329_146_146.png","../../assets/avatars/assassins-creed-odyssey/330_146_146.png":"assets/avatars/assassins-creed-odyssey/330_146_146.png","../../assets/avatars/assassins-creed-odyssey/331_146_146.png":"assets/avatars/assassins-creed-odyssey/331_146_146.png","../../assets/avatars/assassins-creed-odyssey/332_146_146.png":"assets/avatars/assassins-creed-odyssey/332_146_146.png","../../assets/avatars/assassins-creed-odyssey/334_146_146.png":"assets/avatars/assassins-creed-odyssey/334_146_146.png","../../assets/avatars/assassins-creed-odyssey/335_146_146.png":"assets/avatars/assassins-creed-odyssey/335_146_146.png"}],"api/constants.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31645,30 +31696,42 @@ var delay = exports.delay = 200;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.fetchGame = undefined;
+exports.fetchGameCharacters = exports.fetchGameDetails = undefined;
 
 var _gamesDetails = require("./data/games-details");
 
 var _gamesDetails2 = _interopRequireDefault(_gamesDetails);
 
+var _gamesCharacters = require("./data/games-characters");
+
+var _gamesCharacters2 = _interopRequireDefault(_gamesCharacters);
+
 var _constants = require("./constants");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var fetchGame = exports.fetchGame = function fetchGame(id) {
+var fetchGameDetails = exports.fetchGameDetails = function fetchGameDetails(id) {
   return new Promise(function (resolve) {
     setTimeout(function () {
       return resolve(_gamesDetails2.default[id]);
     }, _constants.delay);
   });
 };
-},{"./data/games-details":"api/data/games-details.js","./constants":"api/constants.js"}],"components/styles.js":[function(require,module,exports) {
+
+var fetchGameCharacters = exports.fetchGameCharacters = function fetchGameCharacters(id) {
+  return new Promise(function (resolve) {
+    setTimeout(function () {
+      return resolve(_gamesCharacters2.default[id].characters);
+    }, _constants.delay);
+  });
+};
+},{"./data/games-details":"api/data/games-details.js","./data/games-characters":"api/data/games-characters.js","./constants":"api/constants.js"}],"components/styles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.GamePlatform = exports.GamePlatformWrapper = exports.GameHeader = exports.CenterV = exports.CenterH = exports.Container = undefined;
+exports.GameCharactersWrapper = exports.GameCharacters = exports.GamePlatform = exports.GamePlatformWrapper = exports.GameHeader = exports.GameDetails = exports.CenterV = exports.CenterH = exports.Container = undefined;
 
 var _styledComponents = require("styled-components");
 
@@ -31682,15 +31745,19 @@ var Container = exports.Container = _styledComponents2.default.div.withConfig({
 
 var CenterH = exports.CenterH = _styledComponents2.default.div.withConfig({
   displayName: "styles__CenterH"
-})(["display:flex;flex-direction:row;align-items:center;justify-content:center;"]);
+})(["display:flex;flex-flow:row wrap;align-items:center;justify-content:center;"]);
 
 var CenterV = exports.CenterV = _styledComponents2.default.div.withConfig({
   displayName: "styles__CenterV"
 })(["display:flex;flex-direction:column;align-items:center;justify-content:center;"]);
 
+var GameDetails = exports.GameDetails = _styledComponents2.default.div.withConfig({
+  displayName: "styles__GameDetails"
+})([""]);
+
 var GameHeader = exports.GameHeader = _styledComponents2.default.div.withConfig({
   displayName: "styles__GameHeader"
-})(["display:flex;justify-content:center;align-items:center;img{width:256px;}"]);
+})(["display:flex;justify-content:center;align-items:center;padding-top:72px;img{width:256px;margin:0 32px 32px 0;border-radius:16px;box-shadow:0 0 50px rgba(0,0,0,0.3);}p{font-size:18px;font-weight:normal;text-align:justify;}"]);
 
 var GamePlatformWrapper = exports.GamePlatformWrapper = (0, _styledComponents2.default)(CenterH).withConfig({
   displayName: "styles__GamePlatformWrapper"
@@ -31698,7 +31765,15 @@ var GamePlatformWrapper = exports.GamePlatformWrapper = (0, _styledComponents2.d
 
 var GamePlatform = exports.GamePlatform = _styledComponents2.default.div.withConfig({
   displayName: "styles__GamePlatform"
-})(["display:inline-block;padding:0.25em 0.5em;color:white;border:1px solid white;border-radius:0.28em;background:rgba(34,34,34,0.4);font-size:16px;font-weight:bold;line-height:1.14em;text-transform:uppercase;"]);
+})(["display:inline-block;padding:0.25em 0.5em;margin-right:8px;color:white;border:1px solid white;border-radius:0.28em;background:rgba(34,34,34,0.4);font-size:16px;font-weight:bold;line-height:1.14em;text-transform:uppercase;"]);
+
+var GameCharacters = exports.GameCharacters = (0, _styledComponents2.default)(CenterH).withConfig({
+  displayName: "styles__GameCharacters"
+})(["justify-content:flex-start;h2{margin:0 0 16px;}"]);
+
+var GameCharactersWrapper = exports.GameCharactersWrapper = (0, _styledComponents2.default)(CenterH).withConfig({
+  displayName: "styles__GameCharactersWrapper"
+})(["justify-content:flex-start;img{width:80px;border-radius:8px;margin:0 8px 8px;box-shadow:0 0 16px rgba(0,0,0,0.3);}"]);
 },{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/GameHeader.js":[function(require,module,exports) {
 "use strict";
 
@@ -31707,9 +31782,27 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.GameHeader = undefined;
 
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require("babel-runtime/helpers/possibleConstructorReturn");
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require("babel-runtime/helpers/inherits");
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
 var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
+
+var _fetchGame = require("../api/fetchGame");
 
 var _styles = require("./styles");
 
@@ -31719,35 +31812,181 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var GameHeader = exports.GameHeader = function GameHeader(_ref) {
-  var game = _ref.game;
-  return _react2.default.createElement(
-    S.GameHeader,
-    null,
-    _react2.default.createElement("img", { src: game.image_url }),
-    _react2.default.createElement(
-      S.Container,
-      null,
-      _react2.default.createElement(
-        "h1",
+var GameHeader = exports.GameHeader = function (_Component) {
+  (0, _inherits3.default)(GameHeader, _Component);
+
+  function GameHeader() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    (0, _classCallCheck3.default)(this, GameHeader);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = GameHeader.__proto__ || Object.getPrototypeOf(GameHeader)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      game: null,
+      isLoading: true
+    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+  }
+
+  (0, _createClass3.default)(GameHeader, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      (0, _fetchGame.fetchGameDetails)(this.props.gameId).then(function (game) {
+        return _this2.setState({ isLoading: false, game: game });
+      }, function (error) {
+        return _this2.setState({ isLoading: false, error: error });
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _state = this.state,
+          game = _state.game,
+          isLoading = _state.isLoading;
+
+
+      return _react2.default.createElement(
+        S.GameHeader,
         null,
-        game.name
-      ),
-      _react2.default.createElement(
-        S.GamePlatformWrapper,
+        isLoading ? "loading..." : _react2.default.createElement(
+          _react.Fragment,
+          null,
+          _react2.default.createElement("img", { src: game.image_url }),
+          _react2.default.createElement(
+            S.Container,
+            null,
+            _react2.default.createElement(
+              "h1",
+              null,
+              game.name
+            ),
+            _react2.default.createElement(
+              S.GamePlatformWrapper,
+              null,
+              game.platforms.map(function (platform) {
+                return _react2.default.createElement(
+                  S.GamePlatform,
+                  { key: platform },
+                  platform
+                );
+              })
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              game.description
+            )
+          )
+        )
+      );
+    }
+  }]);
+  return GameHeader;
+}(_react.Component);
+},{"babel-runtime/helpers/classCallCheck":"../node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"../node_modules/babel-runtime/helpers/createClass.js","babel-runtime/helpers/possibleConstructorReturn":"../node_modules/babel-runtime/helpers/possibleConstructorReturn.js","babel-runtime/helpers/inherits":"../node_modules/babel-runtime/helpers/inherits.js","react":"../vendor/react.development.js","../api/fetchGame":"api/fetchGame.js","./styles":"components/styles.js"}],"components/GameCharacters.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.GameCharacters = undefined;
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require("babel-runtime/helpers/possibleConstructorReturn");
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require("babel-runtime/helpers/inherits");
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _fetchGame = require("../api/fetchGame");
+
+var _styles = require("./styles");
+
+var S = _interopRequireWildcard(_styles);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GameCharacters = exports.GameCharacters = function (_Component) {
+  (0, _inherits3.default)(GameCharacters, _Component);
+
+  function GameCharacters() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    (0, _classCallCheck3.default)(this, GameCharacters);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = GameCharacters.__proto__ || Object.getPrototypeOf(GameCharacters)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      characters: null,
+      isLoading: true
+    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+  }
+
+  (0, _createClass3.default)(GameCharacters, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      (0, _fetchGame.fetchGameCharacters)(this.props.gameId).then(function (characters) {
+        return _this2.setState({ isLoading: false, characters: characters });
+      }, function (error) {
+        return _this2.setState({ isLoading: false, error: error });
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _state = this.state,
+          characters = _state.characters,
+          isLoading = _state.isLoading;
+
+
+      return _react2.default.createElement(
+        S.GameCharacters,
         null,
-        game.platforms.map(function (platform) {
-          return _react2.default.createElement(
-            S.GamePlatform,
-            { key: platform },
-            platform
-          );
-        })
-      )
-    )
-  );
-};
-},{"react":"../vendor/react.development.js","./styles":"components/styles.js"}],"components/GameDetails.js":[function(require,module,exports) {
+        _react2.default.createElement(
+          "h2",
+          null,
+          "Characters"
+        ),
+        isLoading ? "loading..." : _react2.default.createElement(
+          S.GameCharactersWrapper,
+          null,
+          characters.map(function (character) {
+            return _react2.default.createElement("img", { src: character });
+          })
+        )
+      );
+    }
+  }]);
+  return GameCharacters;
+}(_react.Component);
+},{"babel-runtime/helpers/classCallCheck":"../node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"../node_modules/babel-runtime/helpers/createClass.js","babel-runtime/helpers/possibleConstructorReturn":"../node_modules/babel-runtime/helpers/possibleConstructorReturn.js","babel-runtime/helpers/inherits":"../node_modules/babel-runtime/helpers/inherits.js","react":"../vendor/react.development.js","../api/fetchGame":"api/fetchGame.js","./styles":"components/styles.js"}],"components/GameDetails.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31775,9 +32014,15 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _fetchGame = require("../api/fetchGame");
-
 var _GameHeader = require("./GameHeader/");
+
+var _GameCharacters = require("./GameCharacters/");
+
+var _styles = require("./styles");
+
+var S = _interopRequireWildcard(_styles);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31785,49 +32030,26 @@ var GameDetails = exports.GameDetails = function (_Component) {
   (0, _inherits3.default)(GameDetails, _Component);
 
   function GameDetails() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
     (0, _classCallCheck3.default)(this, GameDetails);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = GameDetails.__proto__ || Object.getPrototypeOf(GameDetails)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      game: null,
-      isLoading: true
-    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+    return (0, _possibleConstructorReturn3.default)(this, (GameDetails.__proto__ || Object.getPrototypeOf(GameDetails)).apply(this, arguments));
   }
 
   (0, _createClass3.default)(GameDetails, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      (0, _fetchGame.fetchGame)(this.props.id).then(function (game) {
-        return _this2.setState({ isLoading: false, game: game });
-      }, function (error) {
-        return _this2.setState({ isLoading: false, error: error });
-      });
-    }
-  }, {
     key: "render",
     value: function render() {
-      var _state = this.state,
-          game = _state.game,
-          isLoading = _state.isLoading;
+      var id = this.props.id;
 
-      if (isLoading) {
-        return "loading...";
-      }
-      return _react2.default.createElement(_GameHeader.GameHeader, { game: game });
+      return _react2.default.createElement(
+        S.GameDetails,
+        null,
+        _react2.default.createElement(_GameHeader.GameHeader, { gameId: id }),
+        _react2.default.createElement(_GameCharacters.GameCharacters, { gameId: id })
+      );
     }
   }]);
   return GameDetails;
 }(_react.Component);
-},{"babel-runtime/helpers/classCallCheck":"../node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"../node_modules/babel-runtime/helpers/createClass.js","babel-runtime/helpers/possibleConstructorReturn":"../node_modules/babel-runtime/helpers/possibleConstructorReturn.js","babel-runtime/helpers/inherits":"../node_modules/babel-runtime/helpers/inherits.js","react":"../vendor/react.development.js","../api/fetchGame":"api/fetchGame.js","./GameHeader/":"components/GameHeader.js"}],"Game.js":[function(require,module,exports) {
+},{"babel-runtime/helpers/classCallCheck":"../node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"../node_modules/babel-runtime/helpers/createClass.js","babel-runtime/helpers/possibleConstructorReturn":"../node_modules/babel-runtime/helpers/possibleConstructorReturn.js","babel-runtime/helpers/inherits":"../node_modules/babel-runtime/helpers/inherits.js","react":"../vendor/react.development.js","./GameHeader/":"components/GameHeader.js","./GameCharacters/":"components/GameCharacters.js","./styles":"components/styles.js"}],"Game.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

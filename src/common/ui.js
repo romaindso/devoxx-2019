@@ -7,6 +7,13 @@ export const Title = styled.h1`
   align-items: center;
 `;
 
+export const Container = styled.div`
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
 export const IconController = styled.img`
   width: 60px;
   margin-right: 8px;

@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const CenterH = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
 `;
@@ -21,13 +21,25 @@ export const CenterV = styled.div`
   justify-content: center;
 `;
 
+export const GameDetails = styled.div``;
+
 export const GameHeader = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 72px;
 
   img {
     width: 256px;
+    margin: 0 32px 32px 0;
+    border-radius: 16px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: justify;
   }
 `;
 
@@ -38,6 +50,7 @@ export const GamePlatformWrapper = styled(CenterH)`
 export const GamePlatform = styled.div`
   display: inline-block;
   padding: 0.25em 0.5em;
+  margin-right: 8px;
   color: white;
   border: 1px solid white;
   border-radius: 0.28em;
@@ -46,4 +59,23 @@ export const GamePlatform = styled.div`
   font-weight: bold;
   line-height: 1.14em;
   text-transform: uppercase;
+`;
+
+export const GameCharacters = styled(CenterH)`
+  justify-content: flex-start;
+
+  h2 {
+    margin: 0 0 16px;
+  }
+`;
+
+export const GameCharactersWrapper = styled(CenterH)`
+  justify-content: flex-start;
+
+  img {
+    width: 80px;
+    border-radius: 8px;
+    margin: 0 8px 8px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+  }
 `;

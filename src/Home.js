@@ -9,7 +9,7 @@ import {
   Item,
   GameTitle,
   GameCover
-} from "./common/Ui";
+} from "./common/ui";
 import games from "./api/data/games";
 import controller_url from "./assets/others/icon_controller.png";
 
