@@ -66,6 +66,7 @@ export const GameCharacters = styled(CenterH)`
 
   h2 {
     margin: 0 0 16px;
+    width: 100%;
   }
 `;
 
@@ -78,4 +79,10 @@ export const GameCharactersWrapper = styled(CenterH)`
     margin: 0 8px 8px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
   }
+`;
+
+export const GameVideos = styled(GameCharacters)``;
+
+export const GameVideosWrapper = styled(CenterH)`
+  justify-content: flex-start;
 `;

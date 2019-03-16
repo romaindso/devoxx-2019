@@ -31291,8 +31291,6 @@ module.exports = "/anno-1800.4262abdb.jpg";
 module.exports = "/far-cry-5.5ddeec60.jpg";
 },{}],"assets/cover/rayman-legends.jpg":[function(require,module,exports) {
 module.exports = "/rayman-legends.ce8bfaa3.jpg";
-},{}],"assets/cover/lapins-cretins-invasion.jpg":[function(require,module,exports) {
-module.exports = "/lapins-cretins-invasion.4af9ae8e.jpg";
 },{}],"api/data/games.js":[function(require,module,exports) {
 "use strict";
 
@@ -31329,13 +31327,8 @@ exports.default = [{
   name: "Rayman Legends",
   image_url: require("../../assets/cover/rayman-legends.jpg"),
   platforms: ["PC"]
-}, {
-  id: "lapinscretins",
-  name: "Les lapins crétins invasion",
-  image_url: require("../../assets/cover/lapins-cretins-invasion.jpg"),
-  platforms: ["PC"]
 }];
-},{"../../assets/cover/assassins-creed-odyssey.jpg":"assets/cover/assassins-creed-odyssey.jpg","../../assets/cover/the-division-2.jpg":"assets/cover/the-division-2.jpg","../../assets/cover/rainbow-six-siege.jpg":"assets/cover/rainbow-six-siege.jpg","../../assets/cover/anno-1800.jpg":"assets/cover/anno-1800.jpg","../../assets/cover/far-cry-5.jpg":"assets/cover/far-cry-5.jpg","../../assets/cover/rayman-legends.jpg":"assets/cover/rayman-legends.jpg","../../assets/cover/lapins-cretins-invasion.jpg":"assets/cover/lapins-cretins-invasion.jpg"}],"assets/others/icon_controller.png":[function(require,module,exports) {
+},{"../../assets/cover/assassins-creed-odyssey.jpg":"assets/cover/assassins-creed-odyssey.jpg","../../assets/cover/the-division-2.jpg":"assets/cover/the-division-2.jpg","../../assets/cover/rainbow-six-siege.jpg":"assets/cover/rainbow-six-siege.jpg","../../assets/cover/anno-1800.jpg":"assets/cover/anno-1800.jpg","../../assets/cover/far-cry-5.jpg":"assets/cover/far-cry-5.jpg","../../assets/cover/rayman-legends.jpg":"assets/cover/rayman-legends.jpg"}],"assets/others/icon_controller.png":[function(require,module,exports) {
 module.exports = "/icon_controller.9c37da74.png";
 },{}],"Home.js":[function(require,module,exports) {
 "use strict";
@@ -31618,17 +31611,9 @@ exports.default = {
     platforms: ["PC"],
     description: "In Rayman Legends, Rayman, Globox and the Teensies have gotten themselves in trouble yet again. As they roam around an enchanted forest, they discover a collection of immersive paintings. Each painting depicts the story of a unique, mythical world. One painting of a medieval world is particularly immersive. Rayman and friends finds themselves literally sucked inside of it, and a long journey begins.",
     characters: []
-  },
-  lapinscretins: {
-    id: "lapinscretins",
-    name: "Les lapins crétins invasion",
-    image_url: require("../../assets/cover/lapins-cretins-invasion.jpg"),
-    platforms: ["PC"],
-    description: "Rabbids Invasion: The Interactive TV Show gives kids an opportunity to watch, play and interact with their favorite TV characters, the Rabbids!  With over 20 interactive TV episodes, kids will jump into the show by playing full motion mini-games with over 400 activities like Match the Pose, Speed Drawing, Dance Like Crazy, Sticker Hunt and more!",
-    characters: []
   }
 };
-},{"../../assets/cover/assassins-creed-odyssey.jpg":"assets/cover/assassins-creed-odyssey.jpg","../../assets/cover/the-division-2.jpg":"assets/cover/the-division-2.jpg","../../assets/cover/rainbow-six-siege.jpg":"assets/cover/rainbow-six-siege.jpg","../../assets/cover/anno-1800.jpg":"assets/cover/anno-1800.jpg","../../assets/cover/far-cry-5.jpg":"assets/cover/far-cry-5.jpg","../../assets/cover/rayman-legends.jpg":"assets/cover/rayman-legends.jpg","../../assets/cover/lapins-cretins-invasion.jpg":"assets/cover/lapins-cretins-invasion.jpg"}],"assets/avatars/assassins-creed-odyssey/325_146_146.png":[function(require,module,exports) {
+},{"../../assets/cover/assassins-creed-odyssey.jpg":"assets/cover/assassins-creed-odyssey.jpg","../../assets/cover/the-division-2.jpg":"assets/cover/the-division-2.jpg","../../assets/cover/rainbow-six-siege.jpg":"assets/cover/rainbow-six-siege.jpg","../../assets/cover/anno-1800.jpg":"assets/cover/anno-1800.jpg","../../assets/cover/far-cry-5.jpg":"assets/cover/far-cry-5.jpg","../../assets/cover/rayman-legends.jpg":"assets/cover/rayman-legends.jpg"}],"assets/avatars/assassins-creed-odyssey/325_146_146.png":[function(require,module,exports) {
 module.exports = "/325_146_146.646b86c5.png";
 },{}],"assets/avatars/assassins-creed-odyssey/326_146_146.png":[function(require,module,exports) {
 module.exports = "/326_146_146.baf22764.png";
@@ -31648,6 +31633,66 @@ module.exports = "/332_146_146.af451ec1.png";
 module.exports = "/334_146_146.1b169a63.png";
 },{}],"assets/avatars/assassins-creed-odyssey/335_146_146.png":[function(require,module,exports) {
 module.exports = "/335_146_146.1aa153c1.png";
+},{}],"assets/avatars/rainbow-six-siege/277_146_146.png":[function(require,module,exports) {
+module.exports = "/277_146_146.9c724bdb.png";
+},{}],"assets/avatars/rainbow-six-siege/278_146_146.png":[function(require,module,exports) {
+module.exports = "/278_146_146.aae58e8e.png";
+},{}],"assets/avatars/rainbow-six-siege/279_146_146.png":[function(require,module,exports) {
+module.exports = "/279_146_146.0ebeffb7.png";
+},{}],"assets/avatars/rainbow-six-siege/280_146_146.png":[function(require,module,exports) {
+module.exports = "/280_146_146.8c981c2a.png";
+},{}],"assets/avatars/rainbow-six-siege/281_146_146.png":[function(require,module,exports) {
+module.exports = "/281_146_146.118db556.png";
+},{}],"assets/avatars/rainbow-six-siege/282_146_146.png":[function(require,module,exports) {
+module.exports = "/282_146_146.d0eed118.png";
+},{}],"assets/avatars/rainbow-six-siege/284_146_146.png":[function(require,module,exports) {
+module.exports = "/284_146_146.0888f571.png";
+},{}],"assets/avatars/rainbow-six-siege/286_146_146.png":[function(require,module,exports) {
+module.exports = "/286_146_146.d52101ad.png";
+},{}],"assets/avatars/rainbow-six-siege/287_146_146.png":[function(require,module,exports) {
+module.exports = "/287_146_146.2b14e108.png";
+},{}],"assets/avatars/rainbow-six-siege/288_146_146.png":[function(require,module,exports) {
+module.exports = "/288_146_146.2c9fc854.png";
+},{}],"assets/avatars/far-cry-5/312_146_146.png":[function(require,module,exports) {
+module.exports = "/312_146_146.b41ccfb6.png";
+},{}],"assets/avatars/far-cry-5/313_146_146.png":[function(require,module,exports) {
+module.exports = "/313_146_146.8f63f385.png";
+},{}],"assets/avatars/far-cry-5/314_146_146.png":[function(require,module,exports) {
+module.exports = "/314_146_146.b5661d86.png";
+},{}],"assets/avatars/far-cry-5/315_146_146.png":[function(require,module,exports) {
+module.exports = "/315_146_146.636b7fd7.png";
+},{}],"assets/avatars/far-cry-5/316_146_146.png":[function(require,module,exports) {
+module.exports = "/316_146_146.6024f3ec.png";
+},{}],"assets/avatars/far-cry-5/317_146_146.png":[function(require,module,exports) {
+module.exports = "/317_146_146.dbaaac63.png";
+},{}],"assets/avatars/far-cry-5/318_146_146.png":[function(require,module,exports) {
+module.exports = "/318_146_146.a9fd5c23.png";
+},{}],"assets/avatars/far-cry-5/324_146_146.png":[function(require,module,exports) {
+module.exports = "/324_146_146.4809f082.png";
+},{}],"assets/avatars/far-cry-5/320_146_146.png":[function(require,module,exports) {
+module.exports = "/320_146_146.376986bb.png";
+},{}],"assets/avatars/far-cry-5/321_146_146.png":[function(require,module,exports) {
+module.exports = "/321_146_146.a70ffe82.png";
+},{}],"assets/avatars/far-cry-5/322_146_146.png":[function(require,module,exports) {
+module.exports = "/322_146_146.b2a897a2.png";
+},{}],"assets/avatars/far-cry-5/323_146_146.png":[function(require,module,exports) {
+module.exports = "/323_146_146.6a30fad0.png";
+},{}],"assets/avatars/rayman-legends/130_146_146.png":[function(require,module,exports) {
+module.exports = "/130_146_146.ea6210cb.png";
+},{}],"assets/avatars/rayman-legends/131_146_146.png":[function(require,module,exports) {
+module.exports = "/131_146_146.ee464959.png";
+},{}],"assets/avatars/rayman-legends/132_146_146.png":[function(require,module,exports) {
+module.exports = "/132_146_146.e172e3a8.png";
+},{}],"assets/avatars/rayman-legends/135_146_146.png":[function(require,module,exports) {
+module.exports = "/135_146_146.fe2cfbbb.png";
+},{}],"assets/avatars/rayman-legends/136_146_146.png":[function(require,module,exports) {
+module.exports = "/136_146_146.ad0c8d3d.png";
+},{}],"assets/avatars/rayman-legends/137_146_146.png":[function(require,module,exports) {
+module.exports = "/137_146_146.7ace89a4.png";
+},{}],"assets/avatars/rayman-legends/138_146_146.png":[function(require,module,exports) {
+module.exports = "/138_146_146.c3045b19.png";
+},{}],"assets/avatars/rayman-legends/139_146_146.png":[function(require,module,exports) {
+module.exports = "/139_146_146.b7c0529f.png";
 },{}],"api/data/games-characters.js":[function(require,module,exports) {
 "use strict";
 
@@ -31665,7 +31710,7 @@ exports.default = {
   },
   rainbowsiege: {
     id: "rainbowsiege",
-    characters: []
+    characters: [require("../../assets/avatars/rainbow-six-siege/277_146_146.png"), require("../../assets/avatars/rainbow-six-siege/278_146_146.png"), require("../../assets/avatars/rainbow-six-siege/279_146_146.png"), require("../../assets/avatars/rainbow-six-siege/280_146_146.png"), require("../../assets/avatars/rainbow-six-siege/281_146_146.png"), require("../../assets/avatars/rainbow-six-siege/282_146_146.png"), require("../../assets/avatars/rainbow-six-siege/284_146_146.png"), require("../../assets/avatars/rainbow-six-siege/286_146_146.png"), require("../../assets/avatars/rainbow-six-siege/287_146_146.png"), require("../../assets/avatars/rainbow-six-siege/288_146_146.png")]
   },
   anno1800: {
     id: "anno1800",
@@ -31673,17 +31718,46 @@ exports.default = {
   },
   farcry5: {
     id: "farcry5",
-    characters: []
+    characters: [require("../../assets/avatars/far-cry-5/312_146_146.png"), require("../../assets/avatars/far-cry-5/313_146_146.png"), require("../../assets/avatars/far-cry-5/314_146_146.png"), require("../../assets/avatars/far-cry-5/315_146_146.png"), require("../../assets/avatars/far-cry-5/316_146_146.png"), require("../../assets/avatars/far-cry-5/317_146_146.png"), require("../../assets/avatars/far-cry-5/318_146_146.png"), require("../../assets/avatars/far-cry-5/324_146_146.png"), require("../../assets/avatars/far-cry-5/320_146_146.png"), require("../../assets/avatars/far-cry-5/321_146_146.png"), require("../../assets/avatars/far-cry-5/322_146_146.png"), require("../../assets/avatars/far-cry-5/323_146_146.png")]
   },
   raymanlegends: {
     id: "raymanlegends",
-    characters: []
-  },
-  lapinscretins: {
-    characters: []
+    characters: [require("../../assets/avatars/rayman-legends/130_146_146.png"), require("../../assets/avatars/rayman-legends/131_146_146.png"), require("../../assets/avatars/rayman-legends/132_146_146.png"), require("../../assets/avatars/rayman-legends/135_146_146.png"), require("../../assets/avatars/rayman-legends/136_146_146.png"), require("../../assets/avatars/rayman-legends/137_146_146.png"), require("../../assets/avatars/rayman-legends/138_146_146.png"), require("../../assets/avatars/rayman-legends/139_146_146.png")]
   }
 };
-},{"../../assets/avatars/assassins-creed-odyssey/325_146_146.png":"assets/avatars/assassins-creed-odyssey/325_146_146.png","../../assets/avatars/assassins-creed-odyssey/326_146_146.png":"assets/avatars/assassins-creed-odyssey/326_146_146.png","../../assets/avatars/assassins-creed-odyssey/327_146_146.png":"assets/avatars/assassins-creed-odyssey/327_146_146.png","../../assets/avatars/assassins-creed-odyssey/328_146_146.png":"assets/avatars/assassins-creed-odyssey/328_146_146.png","../../assets/avatars/assassins-creed-odyssey/329_146_146.png":"assets/avatars/assassins-creed-odyssey/329_146_146.png","../../assets/avatars/assassins-creed-odyssey/330_146_146.png":"assets/avatars/assassins-creed-odyssey/330_146_146.png","../../assets/avatars/assassins-creed-odyssey/331_146_146.png":"assets/avatars/assassins-creed-odyssey/331_146_146.png","../../assets/avatars/assassins-creed-odyssey/332_146_146.png":"assets/avatars/assassins-creed-odyssey/332_146_146.png","../../assets/avatars/assassins-creed-odyssey/334_146_146.png":"assets/avatars/assassins-creed-odyssey/334_146_146.png","../../assets/avatars/assassins-creed-odyssey/335_146_146.png":"assets/avatars/assassins-creed-odyssey/335_146_146.png"}],"api/constants.js":[function(require,module,exports) {
+},{"../../assets/avatars/assassins-creed-odyssey/325_146_146.png":"assets/avatars/assassins-creed-odyssey/325_146_146.png","../../assets/avatars/assassins-creed-odyssey/326_146_146.png":"assets/avatars/assassins-creed-odyssey/326_146_146.png","../../assets/avatars/assassins-creed-odyssey/327_146_146.png":"assets/avatars/assassins-creed-odyssey/327_146_146.png","../../assets/avatars/assassins-creed-odyssey/328_146_146.png":"assets/avatars/assassins-creed-odyssey/328_146_146.png","../../assets/avatars/assassins-creed-odyssey/329_146_146.png":"assets/avatars/assassins-creed-odyssey/329_146_146.png","../../assets/avatars/assassins-creed-odyssey/330_146_146.png":"assets/avatars/assassins-creed-odyssey/330_146_146.png","../../assets/avatars/assassins-creed-odyssey/331_146_146.png":"assets/avatars/assassins-creed-odyssey/331_146_146.png","../../assets/avatars/assassins-creed-odyssey/332_146_146.png":"assets/avatars/assassins-creed-odyssey/332_146_146.png","../../assets/avatars/assassins-creed-odyssey/334_146_146.png":"assets/avatars/assassins-creed-odyssey/334_146_146.png","../../assets/avatars/assassins-creed-odyssey/335_146_146.png":"assets/avatars/assassins-creed-odyssey/335_146_146.png","../../assets/avatars/rainbow-six-siege/277_146_146.png":"assets/avatars/rainbow-six-siege/277_146_146.png","../../assets/avatars/rainbow-six-siege/278_146_146.png":"assets/avatars/rainbow-six-siege/278_146_146.png","../../assets/avatars/rainbow-six-siege/279_146_146.png":"assets/avatars/rainbow-six-siege/279_146_146.png","../../assets/avatars/rainbow-six-siege/280_146_146.png":"assets/avatars/rainbow-six-siege/280_146_146.png","../../assets/avatars/rainbow-six-siege/281_146_146.png":"assets/avatars/rainbow-six-siege/281_146_146.png","../../assets/avatars/rainbow-six-siege/282_146_146.png":"assets/avatars/rainbow-six-siege/282_146_146.png","../../assets/avatars/rainbow-six-siege/284_146_146.png":"assets/avatars/rainbow-six-siege/284_146_146.png","../../assets/avatars/rainbow-six-siege/286_146_146.png":"assets/avatars/rainbow-six-siege/286_146_146.png","../../assets/avatars/rainbow-six-siege/287_146_146.png":"assets/avatars/rainbow-six-siege/287_146_146.png","../../assets/avatars/rainbow-six-siege/288_146_146.png":"assets/avatars/rainbow-six-siege/288_146_146.png","../../assets/avatars/far-cry-5/312_146_146.png":"assets/avatars/far-cry-5/312_146_146.png","../../assets/avatars/far-cry-5/313_146_146.png":"assets/avatars/far-cry-5/313_146_146.png","../../assets/avatars/far-cry-5/314_146_146.png":"assets/avatars/far-cry-5/314_146_146.png","../../assets/avatars/far-cry-5/315_146_146.png":"assets/avatars/far-cry-5/315_146_146.png","../../assets/avatars/far-cry-5/316_146_146.png":"assets/avatars/far-cry-5/316_146_146.png","../../assets/avatars/far-cry-5/317_146_146.png":"assets/avatars/far-cry-5/317_146_146.png","../../assets/avatars/far-cry-5/318_146_146.png":"assets/avatars/far-cry-5/318_146_146.png","../../assets/avatars/far-cry-5/324_146_146.png":"assets/avatars/far-cry-5/324_146_146.png","../../assets/avatars/far-cry-5/320_146_146.png":"assets/avatars/far-cry-5/320_146_146.png","../../assets/avatars/far-cry-5/321_146_146.png":"assets/avatars/far-cry-5/321_146_146.png","../../assets/avatars/far-cry-5/322_146_146.png":"assets/avatars/far-cry-5/322_146_146.png","../../assets/avatars/far-cry-5/323_146_146.png":"assets/avatars/far-cry-5/323_146_146.png","../../assets/avatars/rayman-legends/130_146_146.png":"assets/avatars/rayman-legends/130_146_146.png","../../assets/avatars/rayman-legends/131_146_146.png":"assets/avatars/rayman-legends/131_146_146.png","../../assets/avatars/rayman-legends/132_146_146.png":"assets/avatars/rayman-legends/132_146_146.png","../../assets/avatars/rayman-legends/135_146_146.png":"assets/avatars/rayman-legends/135_146_146.png","../../assets/avatars/rayman-legends/136_146_146.png":"assets/avatars/rayman-legends/136_146_146.png","../../assets/avatars/rayman-legends/137_146_146.png":"assets/avatars/rayman-legends/137_146_146.png","../../assets/avatars/rayman-legends/138_146_146.png":"assets/avatars/rayman-legends/138_146_146.png","../../assets/avatars/rayman-legends/139_146_146.png":"assets/avatars/rayman-legends/139_146_146.png"}],"api/data/games-videos.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  acodyssey: {
+    id: "acodyssey",
+    videos: []
+  },
+  thedivion2: {
+    id: "thedivion2",
+    videos: []
+  },
+  rainbowsiege: {
+    id: "rainbowsiege",
+    videos: ["https://youtu.be/Ng6nflV3Vxw?list=PLFfHUaPClTzZiTE-eAWbGE3VvvgZr4318", "https://www.youtube.com/watch?v=LAFV5y58f20", "https://www.youtube.com/watch?v=bOIoUIUViHE"]
+  },
+  anno1800: {
+    id: "anno1800",
+    videos: []
+  },
+  farcry5: {
+    id: "farcry5",
+    videos: []
+  },
+  raymanlegends: {
+    id: "raymanlegends",
+    videos: []
+  }
+};
+},{}],"api/constants.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31696,7 +31770,7 @@ var delay = exports.delay = 200;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.fetchGameCharacters = exports.fetchGameDetails = undefined;
+exports.fetchGameVideos = exports.fetchGameCharacters = exports.fetchGameDetails = undefined;
 
 var _gamesDetails = require("./data/games-details");
 
@@ -31705,6 +31779,10 @@ var _gamesDetails2 = _interopRequireDefault(_gamesDetails);
 var _gamesCharacters = require("./data/games-characters");
 
 var _gamesCharacters2 = _interopRequireDefault(_gamesCharacters);
+
+var _gamesVideos = require("./data/games-videos");
+
+var _gamesVideos2 = _interopRequireDefault(_gamesVideos);
 
 var _constants = require("./constants");
 
@@ -31725,13 +31803,21 @@ var fetchGameCharacters = exports.fetchGameCharacters = function fetchGameCharac
     }, _constants.delay);
   });
 };
-},{"./data/games-details":"api/data/games-details.js","./data/games-characters":"api/data/games-characters.js","./constants":"api/constants.js"}],"components/styles.js":[function(require,module,exports) {
+
+var fetchGameVideos = exports.fetchGameVideos = function fetchGameVideos(id) {
+  return new Promise(function (resolve) {
+    setTimeout(function () {
+      return resolve(_gamesVideos2.default[id].videos);
+    }, _constants.delay);
+  });
+};
+},{"./data/games-details":"api/data/games-details.js","./data/games-characters":"api/data/games-characters.js","./data/games-videos":"api/data/games-videos.js","./constants":"api/constants.js"}],"components/styles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.GameCharactersWrapper = exports.GameCharacters = exports.GamePlatform = exports.GamePlatformWrapper = exports.GameHeader = exports.GameDetails = exports.CenterV = exports.CenterH = exports.Container = undefined;
+exports.GameVideosWrapper = exports.GameVideos = exports.GameCharactersWrapper = exports.GameCharacters = exports.GamePlatform = exports.GamePlatformWrapper = exports.GameHeader = exports.GameDetails = exports.CenterV = exports.CenterH = exports.Container = undefined;
 
 var _styledComponents = require("styled-components");
 
@@ -31769,11 +31855,19 @@ var GamePlatform = exports.GamePlatform = _styledComponents2.default.div.withCon
 
 var GameCharacters = exports.GameCharacters = (0, _styledComponents2.default)(CenterH).withConfig({
   displayName: "styles__GameCharacters"
-})(["justify-content:flex-start;h2{margin:0 0 16px;}"]);
+})(["justify-content:flex-start;h2{margin:0 0 16px;width:100%;}"]);
 
 var GameCharactersWrapper = exports.GameCharactersWrapper = (0, _styledComponents2.default)(CenterH).withConfig({
   displayName: "styles__GameCharactersWrapper"
 })(["justify-content:flex-start;img{width:80px;border-radius:8px;margin:0 8px 8px;box-shadow:0 0 16px rgba(0,0,0,0.3);}"]);
+
+var GameVideos = exports.GameVideos = (0, _styledComponents2.default)(GameCharacters).withConfig({
+  displayName: "styles__GameVideos"
+})([""]);
+
+var GameVideosWrapper = exports.GameVideosWrapper = (0, _styledComponents2.default)(CenterH).withConfig({
+  displayName: "styles__GameVideosWrapper"
+})(["justify-content:flex-start;"]);
 },{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/GameHeader.js":[function(require,module,exports) {
 "use strict";
 
@@ -31977,14 +32071,117 @@ var GameCharacters = exports.GameCharacters = function (_Component) {
         isLoading ? "loading..." : _react2.default.createElement(
           S.GameCharactersWrapper,
           null,
-          characters.map(function (character) {
-            return _react2.default.createElement("img", { src: character });
+          characters.map(function (character, index) {
+            return _react2.default.createElement("img", { src: character, key: index });
           })
         )
       );
     }
   }]);
   return GameCharacters;
+}(_react.Component);
+},{"babel-runtime/helpers/classCallCheck":"../node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"../node_modules/babel-runtime/helpers/createClass.js","babel-runtime/helpers/possibleConstructorReturn":"../node_modules/babel-runtime/helpers/possibleConstructorReturn.js","babel-runtime/helpers/inherits":"../node_modules/babel-runtime/helpers/inherits.js","react":"../vendor/react.development.js","../api/fetchGame":"api/fetchGame.js","./styles":"components/styles.js"}],"components/GameVideos.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.GameVideos = undefined;
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require("babel-runtime/helpers/possibleConstructorReturn");
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require("babel-runtime/helpers/inherits");
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _fetchGame = require("../api/fetchGame");
+
+var _styles = require("./styles");
+
+var S = _interopRequireWildcard(_styles);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GameVideos = exports.GameVideos = function (_Component) {
+  (0, _inherits3.default)(GameVideos, _Component);
+
+  function GameVideos() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    (0, _classCallCheck3.default)(this, GameVideos);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = GameVideos.__proto__ || Object.getPrototypeOf(GameVideos)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      videos: null,
+      isLoading: true
+    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+  }
+
+  (0, _createClass3.default)(GameVideos, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      (0, _fetchGame.fetchGameVideos)(this.props.gameId).then(function (videos) {
+        return _this2.setState({ isLoading: false, videos: videos });
+      }, function (error) {
+        return _this2.setState({ isLoading: false, error: error });
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _state = this.state,
+          videos = _state.videos,
+          isLoading = _state.isLoading;
+
+
+      return _react2.default.createElement(
+        S.GameVideos,
+        null,
+        _react2.default.createElement(
+          "h2",
+          null,
+          "Videos"
+        ),
+        isLoading ? "loading..." : _react2.default.createElement(
+          S.GameVideosWrapper,
+          null,
+          videos.map(function (video, index) {
+            return _react2.default.createElement("video", {
+              src: video + "&html5=true",
+              key: index,
+              controls: "controls",
+              width: "400",
+              height: "320"
+            });
+          })
+        )
+      );
+    }
+  }]);
+  return GameVideos;
 }(_react.Component);
 },{"babel-runtime/helpers/classCallCheck":"../node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"../node_modules/babel-runtime/helpers/createClass.js","babel-runtime/helpers/possibleConstructorReturn":"../node_modules/babel-runtime/helpers/possibleConstructorReturn.js","babel-runtime/helpers/inherits":"../node_modules/babel-runtime/helpers/inherits.js","react":"../vendor/react.development.js","../api/fetchGame":"api/fetchGame.js","./styles":"components/styles.js"}],"components/GameDetails.js":[function(require,module,exports) {
 "use strict";
@@ -32018,6 +32215,8 @@ var _GameHeader = require("./GameHeader/");
 
 var _GameCharacters = require("./GameCharacters/");
 
+var _GameVideos = require("./GameVideos/");
+
 var _styles = require("./styles");
 
 var S = _interopRequireWildcard(_styles);
@@ -32043,13 +32242,14 @@ var GameDetails = exports.GameDetails = function (_Component) {
         S.GameDetails,
         null,
         _react2.default.createElement(_GameHeader.GameHeader, { gameId: id }),
-        _react2.default.createElement(_GameCharacters.GameCharacters, { gameId: id })
+        _react2.default.createElement(_GameCharacters.GameCharacters, { gameId: id }),
+        _react2.default.createElement(_GameVideos.GameVideos, { gameId: id })
       );
     }
   }]);
   return GameDetails;
 }(_react.Component);
-},{"babel-runtime/helpers/classCallCheck":"../node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"../node_modules/babel-runtime/helpers/createClass.js","babel-runtime/helpers/possibleConstructorReturn":"../node_modules/babel-runtime/helpers/possibleConstructorReturn.js","babel-runtime/helpers/inherits":"../node_modules/babel-runtime/helpers/inherits.js","react":"../vendor/react.development.js","./GameHeader/":"components/GameHeader.js","./GameCharacters/":"components/GameCharacters.js","./styles":"components/styles.js"}],"Game.js":[function(require,module,exports) {
+},{"babel-runtime/helpers/classCallCheck":"../node_modules/babel-runtime/helpers/classCallCheck.js","babel-runtime/helpers/createClass":"../node_modules/babel-runtime/helpers/createClass.js","babel-runtime/helpers/possibleConstructorReturn":"../node_modules/babel-runtime/helpers/possibleConstructorReturn.js","babel-runtime/helpers/inherits":"../node_modules/babel-runtime/helpers/inherits.js","react":"../vendor/react.development.js","./GameHeader/":"components/GameHeader.js","./GameCharacters/":"components/GameCharacters.js","./GameVideos/":"components/GameVideos.js","./styles":"components/styles.js"}],"Game.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

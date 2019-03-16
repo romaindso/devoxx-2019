@@ -34,11 +34,5 @@ export default [
     name: "Rayman Legends",
     image_url: require("../../assets/cover/rayman-legends.jpg"),
     platforms: ["PC"]
-  },
-  {
-    id: "lapinscretins",
-    name: "Les lapins crétins invasion",
-    image_url: require("../../assets/cover/lapins-cretins-invasion.jpg"),
-    platforms: ["PC"]
   }
 ];

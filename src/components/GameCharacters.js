@@ -26,8 +26,8 @@ export class GameCharacters extends Component {
           "loading..."
         ) : (
           <S.GameCharactersWrapper>
-            {characters.map(character => (
-              <img src={character} />
+            {characters.map((character, index) => (
+              <img src={character} key={index} />
             ))}
           </S.GameCharactersWrapper>
         )}

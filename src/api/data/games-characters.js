@@ -20,7 +20,18 @@ export default {
   },
   rainbowsiege: {
     id: "rainbowsiege",
-    characters: []
+    characters: [
+      require(`../../assets/avatars/rainbow-six-siege/277_146_146.png`),
+      require(`../../assets/avatars/rainbow-six-siege/278_146_146.png`),
+      require(`../../assets/avatars/rainbow-six-siege/279_146_146.png`),
+      require(`../../assets/avatars/rainbow-six-siege/280_146_146.png`),
+      require(`../../assets/avatars/rainbow-six-siege/281_146_146.png`),
+      require(`../../assets/avatars/rainbow-six-siege/282_146_146.png`),
+      require(`../../assets/avatars/rainbow-six-siege/284_146_146.png`),
+      require(`../../assets/avatars/rainbow-six-siege/286_146_146.png`),
+      require(`../../assets/avatars/rainbow-six-siege/287_146_146.png`),
+      require(`../../assets/avatars/rainbow-six-siege/288_146_146.png`)
+    ]
   },
   anno1800: {
     id: "anno1800",
@@ -28,13 +39,32 @@ export default {
   },
   farcry5: {
     id: "farcry5",
-    characters: []
+    characters: [
+      require(`../../assets/avatars/far-cry-5/312_146_146.png`),
+      require(`../../assets/avatars/far-cry-5/313_146_146.png`),
+      require(`../../assets/avatars/far-cry-5/314_146_146.png`),
+      require(`../../assets/avatars/far-cry-5/315_146_146.png`),
+      require(`../../assets/avatars/far-cry-5/316_146_146.png`),
+      require(`../../assets/avatars/far-cry-5/317_146_146.png`),
+      require(`../../assets/avatars/far-cry-5/318_146_146.png`),
+      require(`../../assets/avatars/far-cry-5/324_146_146.png`),
+      require(`../../assets/avatars/far-cry-5/320_146_146.png`),
+      require(`../../assets/avatars/far-cry-5/321_146_146.png`),
+      require(`../../assets/avatars/far-cry-5/322_146_146.png`),
+      require(`../../assets/avatars/far-cry-5/323_146_146.png`)
+    ]
   },
   raymanlegends: {
     id: "raymanlegends",
-    characters: []
-  },
-  lapinscretins: {
-    characters: []
+    characters: [
+      require(`../../assets/avatars/rayman-legends/130_146_146.png`),
+      require(`../../assets/avatars/rayman-legends/131_146_146.png`),
+      require(`../../assets/avatars/rayman-legends/132_146_146.png`),
+      require(`../../assets/avatars/rayman-legends/135_146_146.png`),
+      require(`../../assets/avatars/rayman-legends/136_146_146.png`),
+      require(`../../assets/avatars/rayman-legends/137_146_146.png`),
+      require(`../../assets/avatars/rayman-legends/138_146_146.png`),
+      require(`../../assets/avatars/rayman-legends/139_146_146.png`)
+    ]
   }
 };

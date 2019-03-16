@@ -51,13 +51,5 @@ export default {
     platforms: ["PC"],
     description: `In Rayman Legends, Rayman, Globox and the Teensies have gotten themselves in trouble yet again. As they roam around an enchanted forest, they discover a collection of immersive paintings. Each painting depicts the story of a unique, mythical world. One painting of a medieval world is particularly immersive. Rayman and friends finds themselves literally sucked inside of it, and a long journey begins.`,
     characters: []
-  },
-  lapinscretins: {
-    id: "lapinscretins",
-    name: "Les lapins crétins invasion",
-    image_url: require("../../assets/cover/lapins-cretins-invasion.jpg"),
-    platforms: ["PC"],
-    description: `Rabbids Invasion: The Interactive TV Show gives kids an opportunity to watch, play and interact with their favorite TV characters, the Rabbids!  With over 20 interactive TV episodes, kids will jump into the show by playing full motion mini-games with over 400 activities like Match the Pose, Speed Drawing, Dance Like Crazy, Sticker Hunt and more!`,
-    characters: []
   }
 };

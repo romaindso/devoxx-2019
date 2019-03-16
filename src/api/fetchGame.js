@@ -1,5 +1,6 @@
 import details from "./data/games-details";
-import game from "./data/games-characters";
+import gameCharacters from "./data/games-characters";
+import gameVideos from "./data/games-videos";
 import { delay } from "./constants";
 
 export const fetchGameDetails = id => {
@@ -13,7 +14,15 @@ export const fetchGameDetails = id => {
 export const fetchGameCharacters = id => {
   return new Promise(resolve => {
     setTimeout(() => {
-      return resolve(game[id].characters);
+      return resolve(gameCharacters[id].characters);
+    }, delay);
+  });
+};
+
+export const fetchGameVideos = id => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      return resolve(gameVideos[id].videos);
     }, delay);
   });
 };
