@@ -1,12 +1,12 @@
-import details from "./data/games-details";
-import gameCharacters from "./data/games-characters";
-import gameVideos from "./data/games-videos";
+import gamesDetails from "./data/games-details";
+import gamesCharacters from "./data/games-characters";
+import gamesVideos from "./data/games-videos";
 import { delay } from "./constants";
 
 export const fetchGameDetails = id => {
   return new Promise(resolve => {
     setTimeout(() => {
-      return resolve(details[id]);
+      return resolve(gamesDetails[id]);
     }, delay);
   });
 };
@@ -14,7 +14,7 @@ export const fetchGameDetails = id => {
 export const fetchGameCharacters = id => {
   return new Promise(resolve => {
     setTimeout(() => {
-      return resolve(gameCharacters[id].characters);
+      return resolve(gamesCharacters[id].characters);
     }, delay);
   });
 };
@@ -22,7 +22,7 @@ export const fetchGameCharacters = id => {
 export const fetchGameVideos = id => {
   return new Promise(resolve => {
     setTimeout(() => {
-      return resolve(gameVideos[id].videos);
+      return resolve(gamesVideos[id].videos);
     }, delay);
   });
 };

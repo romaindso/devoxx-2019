@@ -1,10 +1,10 @@
 import React from "react";
-import { Center } from "./ui";
+import * as S from "./styles";
 
 const Loader = ({ type, height = "100%" }) => (
-  <Center>
+  <S.Center>
     <img src={type} height={height} />
-  </Center>
+  </S.Center>
 );
 
 export default Loader;

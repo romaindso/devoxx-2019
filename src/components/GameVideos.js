@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { fetchGameVideos } from "../api/fetchGame";
 import * as S from "./styles";
 

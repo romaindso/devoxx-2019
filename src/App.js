@@ -1,7 +1,7 @@
 import React from "react";
 import { Router } from "@reach/router";
-import { Home } from "./Home";
-import { Game } from "./Game";
+import { Home } from "./pages/Home";
+import { Game } from "./pages/Game";
 
 const App = () => {
   return (

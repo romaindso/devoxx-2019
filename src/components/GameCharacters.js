@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { fetchGameCharacters } from "../api/fetchGame";
 import * as S from "./styles";
 
@@ -21,7 +21,6 @@ export class GameCharacters extends Component {
     return (
       <S.GameCharacters>
         <h2>Characters</h2>
-
         {isLoading ? (
           "loading..."
         ) : (
