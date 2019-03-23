@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "@reach/router";
 import * as S from "../components/styles";
-import games from "../api/data/games";
+import { fetchGameList } from "../api/fetchGame";
 import controller_url from "../assets/others/icon_controller.png";
 
 const GameItem = ({ game }) => (
@@ -11,15 +11,35 @@ const GameItem = ({ game }) => (
   </S.Item>
 );
 
-const GameList = () => (
-  <S.List>
-    {games.map(game => (
-      <Link to={`/games/${game.id}`} key={game.id}>
-        <GameItem game={game} />
-      </Link>
-    ))}
-  </S.List>
-);
+class GameList extends Component {
+  state = {
+    games: null,
+    isLoading: true
+  };
+
+  componentDidMount() {
+    fetchGameList().then(
+      games => this.setState({ isLoading: false, games }),
+      error => this.setState({ isLoading: false, error })
+    );
+  }
+
+  render() {
+    const { games, isLoading } = this.state;
+
+    return (
+      <S.List>
+        {isLoading
+          ? "loading..."
+          : games.map(game => (
+              <Link to={`/games/${game.id}`} key={game.id}>
+                <GameItem game={game} />
+              </Link>
+            ))}
+      </S.List>
+    );
+  }
+}
 
 export const Home = () => (
   <S.Container>
