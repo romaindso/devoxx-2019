@@ -2,9 +2,9 @@ import gamesList from "./data/games-list";
 import gamesDetails from "./data/games-details";
 import gamesCharacters from "./data/games-characters";
 import gamesVideos from "./data/games-videos";
-import { delay } from "./constants";
+// import { delay } from "./constants";
 
-export const fetchGameList = () => {
+export const fetchGameList = delay => {
   return new Promise(resolve => {
     setTimeout(() => {
       return resolve(gamesList);
@@ -12,7 +12,7 @@ export const fetchGameList = () => {
   });
 };
 
-export const fetchGameDetails = id => {
+export const fetchGameDetails = (id, delay) => {
   return new Promise(resolve => {
     setTimeout(() => {
       return resolve(gamesDetails[id]);
@@ -20,7 +20,7 @@ export const fetchGameDetails = id => {
   });
 };
 
-export const fetchGameCharacters = id => {
+export const fetchGameCharacters = (id, delay) => {
   return new Promise(resolve => {
     setTimeout(() => {
       return resolve(gamesCharacters[id].characters);
@@ -28,7 +28,7 @@ export const fetchGameCharacters = id => {
   });
 };
 
-export const fetchGameVideos = id => {
+export const fetchGameVideos = (id, delay) => {
   return new Promise(resolve => {
     setTimeout(() => {
       return resolve(gamesVideos[id].videos);

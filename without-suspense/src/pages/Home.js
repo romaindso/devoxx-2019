@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "@reach/router";
 import * as S from "../components/styles";
 import { fetchGameList } from "../api/fetchGame";
+import { DevToolsContext } from "../components/DevTools";
 import controller_url from "../assets/others/icon_controller.png";
 
 const GameItem = ({ game }) => (
@@ -17,8 +18,11 @@ class GameList extends Component {
     isLoading: true
   };
 
+  static contextType = DevToolsContext;
+
   componentDidMount() {
-    fetchGameList().then(
+    let delay = this.context;
+    fetchGameList(delay).then(
       games => this.setState({ isLoading: false, games }),
       error => this.setState({ isLoading: false, error })
     );

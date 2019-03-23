@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { fetchGameCharacters } from "../api/fetchGame";
+import { DevToolsContext } from "../components/DevTools";
 import * as S from "./styles";
 
 export class GameCharacters extends Component {
@@ -8,8 +9,11 @@ export class GameCharacters extends Component {
     isLoading: true
   };
 
+  static contextType = DevToolsContext;
+
   componentDidMount() {
-    fetchGameCharacters(this.props.gameId).then(
+    let delay = this.context;
+    fetchGameCharacters(this.props.gameId, delay).then(
       characters => this.setState({ isLoading: false, characters }),
       error => this.setState({ isLoading: false, error })
     );

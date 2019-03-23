@@ -139,3 +139,18 @@ export const GameVideos = styled(GameCharacters)``;
 export const GameVideosWrapper = styled(CenterH)`
   justify-content: flex-start;
 `;
+
+export const DevTools = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+
+  input {
+    margin-top: 16px;
+    display: block;
+  }
+`;

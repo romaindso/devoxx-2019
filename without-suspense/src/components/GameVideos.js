@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { fetchGameVideos } from "../api/fetchGame";
+import { DevToolsContext } from "../components/DevTools";
 import * as S from "./styles";
 
 export class GameVideos extends Component {
@@ -8,8 +9,11 @@ export class GameVideos extends Component {
     isLoading: true
   };
 
+  static contextType = DevToolsContext;
+
   componentDidMount() {
-    fetchGameVideos(this.props.gameId).then(
+    let delay = this.context;
+    fetchGameVideos(this.props.gameId, delay).then(
       videos => this.setState({ isLoading: false, videos }),
       error => this.setState({ isLoading: false, error })
     );
