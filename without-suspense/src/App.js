@@ -6,13 +6,13 @@ import { DevTools, DevToolsContext } from "./components/DevTools";
 
 class App extends Component {
   state = {
-    delay: 0
+    delay: localStorage.getItem("delay") || 0
   };
 
   setUpDelay = e => {
-    this.setState({
-      delay: parseFloat(e.target.value) * 1000
-    });
+    const delay = parseFloat(e.target.value) * 1000;
+    localStorage.setItem("delay", delay);
+    this.setState({ delay });
   };
 
   render() {
