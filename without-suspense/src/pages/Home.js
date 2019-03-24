@@ -1,61 +1,17 @@
-import React, { Component } from "react";
-import { Link } from "@reach/router";
+import React from "react";
 import * as S from "../components/styles";
-import { fetchGameList } from "../api/fetchGame";
-import { DevToolsContext } from "../components/DevTools";
-import { Loader } from "../components/Loader";
-import controller_url from "../assets/others/icon_controller.png";
+import { GameList } from "../components/GameList";
+import controllerUrl from "../assets/others/icon_controller.png";
 
-const GameItem = ({ game }) => (
-  <S.Item>
-    <S.GameCover src={game.image_url} />
-    <S.GameTitle>{game.name}</S.GameTitle>
-  </S.Item>
-);
-
-class GameList extends Component {
-  state = {
-    games: null,
-    isLoading: true
-  };
-
-  static contextType = DevToolsContext;
-
-  componentDidMount() {
-    let delay = this.context;
-    fetchGameList(delay).then(
-      games => this.setState({ isLoading: false, games }),
-      error => this.setState({ isLoading: false, error })
-    );
-  }
-
-  render() {
-    const { games, isLoading } = this.state;
-
-    return (
-      <S.List>
-        {isLoading ? (
-          <Loader />
-        ) : (
-          games.map(game => (
-            <Link to={`/games/${game.id}/${game.name}`} key={game.id}>
-              <GameItem game={game} />
-            </Link>
-          ))
-        )}
-      </S.List>
-    );
-  }
-}
-
-export const Home = () => (
+const Home = () => (
   <S.Container>
     <S.CenterV>
       <S.Title>
-        <S.IconController src={controller_url} />
+        <S.IconController src={controllerUrl} />
         Your Games
       </S.Title>
       <GameList />
     </S.CenterV>
   </S.Container>
 );
+export default Home;

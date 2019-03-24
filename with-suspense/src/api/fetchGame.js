@@ -2,9 +2,9 @@ import gamesList from "./data/games-list";
 import gamesDetails from "./data/games-details";
 import gamesCharacters from "./data/games-characters";
 import gamesVideos from "./data/games-videos";
-// import { delay } from "./constants";
 
-export const fetchGameList = delay => {
+export const fetchGameList = (delay = localStorage.getItem("delay")) => {
+  console.log(delay);
   return new Promise(resolve => {
     setTimeout(() => {
       return resolve(gamesList);
@@ -12,7 +12,7 @@ export const fetchGameList = delay => {
   });
 };
 
-export const fetchGameDetails = (id, delay) => {
+export const fetchGameDetails = (id, delay = localStorage.getItem("delay")) => {
   return new Promise(resolve => {
     setTimeout(() => {
       return resolve(gamesDetails[id]);
@@ -20,7 +20,10 @@ export const fetchGameDetails = (id, delay) => {
   });
 };
 
-export const fetchGameCharacters = (id, delay) => {
+export const fetchGameCharacters = (
+  id,
+  delay = localStorage.getItem("delay")
+) => {
   return new Promise(resolve => {
     setTimeout(() => {
       return resolve(gamesCharacters[id].characters);
@@ -28,7 +31,7 @@ export const fetchGameCharacters = (id, delay) => {
   });
 };
 
-export const fetchGameVideos = (id, delay) => {
+export const fetchGameVideos = (id, delay = localStorage.getItem("delay")) => {
   return new Promise(resolve => {
     setTimeout(() => {
       return resolve(gamesVideos[id].videos);

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Router } from "@reach/router";
-import { Home } from "./pages/Home";
-import { Game } from "./pages/Game";
 import { DevTools, DevToolsContext } from "./components/DevTools";
+import Home from "./pages/Home";
+import GameDetails from "./pages/GameDetails";
 
 class App extends Component {
   state = {
@@ -22,7 +22,7 @@ class App extends Component {
       <DevToolsContext.Provider value={delay}>
         <Router>
           <Home path="/" />
-          <Game path="/games/:id/:name" />
+          <GameDetails path="/games/:id/:name" />
         </Router>
         <DevTools setUpDelay={this.setUpDelay} delay={delay} />
       </DevToolsContext.Provider>
