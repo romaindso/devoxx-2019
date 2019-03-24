@@ -3,6 +3,7 @@ import { Link } from "@reach/router";
 import * as S from "../components/styles";
 import { fetchGameList } from "../api/fetchGame";
 import { DevToolsContext } from "../components/DevTools";
+import { Loader } from "../components/Loader";
 import controller_url from "../assets/others/icon_controller.png";
 
 const GameItem = ({ game }) => (
@@ -33,13 +34,15 @@ class GameList extends Component {
 
     return (
       <S.List>
-        {isLoading
-          ? "loading..."
-          : games.map(game => (
-              <Link to={`/games/${game.id}`} key={game.id}>
-                <GameItem game={game} />
-              </Link>
-            ))}
+        {isLoading ? (
+          <Loader />
+        ) : (
+          games.map(game => (
+            <Link to={`/games/${game.id}/${game.name}`} key={game.id}>
+              <GameItem game={game} />
+            </Link>
+          ))
+        )}
       </S.List>
     );
   }

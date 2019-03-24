@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { fetchGameVideos } from "../api/fetchGame";
 import { DevToolsContext } from "../components/DevTools";
+import { Loader } from "../components/Loader";
 import * as S from "./styles";
 
 export class GameVideos extends Component {
@@ -26,7 +27,7 @@ export class GameVideos extends Component {
       <S.GameVideos>
         <h2>Videos</h2>
         {isLoading ? (
-          "loading..."
+          <Loader />
         ) : (
           <S.GameVideosWrapper>
             {videos.map((video, index) => (

@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from "react";
 import { fetchGameDetails } from "../api/fetchGame";
 import { DevToolsContext } from "../components/DevTools";
+import { Loader } from "../components/Loader";
+import { Placeholder } from "../components/Placeholder";
 import * as S from "./styles";
 
 export class GameHeader extends Component {
@@ -21,25 +23,26 @@ export class GameHeader extends Component {
 
   render() {
     const { game, isLoading } = this.state;
+    const { name } = this.props;
 
     return (
       <S.GameHeader>
-        {isLoading ? (
-          "loading..."
-        ) : (
-          <Fragment>
-            <img src={game.image_url} />
-            <S.Container>
-              <h1>{game.name}</h1>
+        {isLoading ? <Placeholder /> : <S.GameImage src={game.image_url} />}
+        <S.Container>
+          <h1>{name}</h1>
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <Fragment>
               <S.GamePlatformWrapper>
                 {game.platforms.map(platform => (
                   <S.GamePlatform key={platform}>{platform}</S.GamePlatform>
                 ))}
               </S.GamePlatformWrapper>
               <p>{game.description}</p>
-            </S.Container>
-          </Fragment>
-        )}
+            </Fragment>
+          )}
+        </S.Container>
       </S.GameHeader>
     );
   }

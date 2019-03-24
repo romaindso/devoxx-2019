@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { fetchGameCharacters } from "../api/fetchGame";
 import { DevToolsContext } from "../components/DevTools";
+import { Loader } from "../components/Loader";
 import * as S from "./styles";
 
 export class GameCharacters extends Component {
@@ -26,7 +27,7 @@ export class GameCharacters extends Component {
       <S.GameCharacters>
         <h2>Characters</h2>
         {isLoading ? (
-          "loading..."
+          <Loader />
         ) : (
           <S.GameCharactersWrapper>
             {characters.map((character, index) => (

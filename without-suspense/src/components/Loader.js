@@ -1,10 +1,9 @@
 import React from "react";
 import * as S from "./styles";
+import loaderUrl from "../assets/others/puff.svg";
 
-const Loader = ({ type, height = "100%" }) => (
-  <S.Center>
-    <img src={type} height={height} />
-  </S.Center>
+export const Loader = () => (
+  <S.Loader>
+    <img src={loaderUrl} />
+  </S.Loader>
 );
-
-export default Loader;

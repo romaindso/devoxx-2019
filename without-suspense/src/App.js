@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { Router } from "@reach/router";
 import { Home } from "./pages/Home";
 import { Game } from "./pages/Game";
@@ -22,7 +22,7 @@ class App extends Component {
       <DevToolsContext.Provider value={delay}>
         <Router>
           <Home path="/" />
-          <Game path="/games/:id" />
+          <Game path="/games/:id/:name" />
         </Router>
         <DevTools setUpDelay={this.setUpDelay} delay={delay} />
       </DevToolsContext.Provider>
