@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "UbisoftSans";
+  src: url("./assets/fonts/UbisoftSans-Bold.woff2") format("woff2"),
+    url("./assets/fonts/UbisoftSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UbisoftSans";
+  src: url("./assets/fonts/UbisoftSans-Regular.woff2") format("woff2"),
+    url("./assets/fonts/UbisoftSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  font-size: 16px;
+  margin: 0 auto;
+  font-family: "UbisoftSans", "Roboto", Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 0 64px;
+}

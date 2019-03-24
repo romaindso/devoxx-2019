@@ -1,4 +1,7 @@
 without-suspense/.cache
 without-suspense/node_modules
 without-suspense/dist
+with-suspense/.cache
+with-suspense/node_modules
+with-suspense/dist
 .DS_Store
