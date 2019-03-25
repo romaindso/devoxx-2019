@@ -1,47 +1,33 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment, Suspense } from "react";
+import { unstable_createResource } from "react-cache";
 import { fetchGameDetails } from "../api/fetchGame";
-import { DevToolsContext } from "../components/DevTools";
 import { Loader } from "../components/Loader";
 import { Placeholder } from "../components/Placeholder";
 import * as S from "./styles";
 
+const GameResource = unstable_createResource(fetchGameDetails);
+
 export class GameHeader extends Component {
-  state = {
-    game: null,
-    isLoading: true
-  };
-
-  static contextType = DevToolsContext;
-
-  componentDidMount() {
-    let delay = this.context;
-    fetchGameDetails(this.props.gameId, delay).then(
-      game => this.setState({ isLoading: false, game }),
-      error => this.setState({ isLoading: false, error })
-    );
-  }
-
   render() {
-    const { game, isLoading } = this.state;
-    const { name } = this.props;
+    const { name, gameId } = this.props;
 
     return (
       <S.GameHeader>
-        {isLoading ? <Placeholder /> : <S.GameImage src={game.image_url} />}
+        <Suspense maxDuration={500} fallback={<Placeholder />}>
+          <S.GameImage src={GameResource.read(gameId).image_url} />
+        </Suspense>
         <S.Container>
           <h1>{name}</h1>
-          {isLoading ? (
-            <Loader />
-          ) : (
+          <Suspense maxDuration={500} fallback={<Loader />}>
             <Fragment>
               <S.GamePlatformWrapper>
-                {game.platforms.map(platform => (
+                {GameResource.read(gameId).platforms.map(platform => (
                   <S.GamePlatform key={platform}>{platform}</S.GamePlatform>
                 ))}
               </S.GamePlatformWrapper>
-              <p>{game.description}</p>
+              <p>{GameResource.read(gameId).description}</p>
             </Fragment>
-          )}
+          </Suspense>
         </S.Container>
       </S.GameHeader>
     );

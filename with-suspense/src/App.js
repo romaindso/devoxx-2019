@@ -2,8 +2,10 @@ import React, { Component, lazy, Suspense } from "react";
 import { Router } from "@reach/router";
 import { DevTools, DevToolsContext } from "./components/DevTools";
 import { Loader } from "./components/Loader";
-const Home = lazy(() => import("./pages/Home"));
-const GameDetails = lazy(() => import("./pages/GameDetails"));
+// const Home = lazy(() => import("./pages/Home"));
+// const GameDetails = lazy(() => import("./pages/GameDetails"));
+import Home from "./pages/Home";
+import GameDetails from "./pages/GameDetails";
 
 class App extends Component {
   state = {
@@ -22,12 +24,12 @@ class App extends Component {
     return (
       <div>
         <DevToolsContext.Provider value={delay}>
-          <Suspense maxDuration={1000} fallback={<Loader />}>
-            <Router>
-              <Home path="/" />
-              <GameDetails path="/games/:id/:name" />
-            </Router>
-          </Suspense>
+          {/* <Suspense maxDuration={1000} fallback={<Loader />}> */}
+          <Router>
+            <Home path="/" />
+            <GameDetails path="/games/:id/:name" />
+          </Router>
+          {/* </Suspense> */}
         </DevToolsContext.Provider>
         <DevTools setUpDelay={this.setUpDelay} delay={delay} />
       </div>
