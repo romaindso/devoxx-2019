@@ -6,7 +6,7 @@ import * as S from "../components/styles";
 
 const GameDetails = ({ id, name }) => (
   <S.GameDetails>
-    <Suspense fallback={<Loader />}>
+    <Suspense maxDuration={1000} fallback={<Loader />}>
       <GameHeader gameId={id} name={name} />
       <GameCharacters gameId={id} />
     </Suspense>

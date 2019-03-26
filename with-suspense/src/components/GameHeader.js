@@ -7,25 +7,40 @@ import * as S from "./styles";
 
 const GameResource = unstable_createResource(fetchGameDetails);
 
+const ImageResource = unstable_createResource(
+  src =>
+    new Promise(resolve => {
+      const img = new Image();
+      img.src = src;
+      img.onload = resolve;
+    })
+);
+
+const Img = ({ src, ...props }) => {
+  ImageResource.read(src);
+  return <S.GameImage src={src} {...props} />;
+};
+
 export class GameHeader extends Component {
   render() {
     const { name, gameId } = this.props;
+    const game = GameResource.read(gameId);
 
     return (
       <S.GameHeader>
-        <Suspense maxDuration={500} fallback={<Placeholder />}>
-          <S.GameImage src={GameResource.read(gameId).image_url} />
+        <Suspense maxDuration={1000} fallback={<Placeholder />}>
+          <Img src={game.image_url} />
         </Suspense>
         <S.Container>
           <h1>{name}</h1>
-          <Suspense maxDuration={500} fallback={<Loader />}>
+          <Suspense maxDuration={1000} fallback={<Loader />}>
             <Fragment>
               <S.GamePlatformWrapper>
-                {GameResource.read(gameId).platforms.map(platform => (
+                {game.platforms.map(platform => (
                   <S.GamePlatform key={platform}>{platform}</S.GamePlatform>
                 ))}
               </S.GamePlatformWrapper>
-              <p>{GameResource.read(gameId).description}</p>
+              <p>{game.description}</p>
             </Fragment>
           </Suspense>
         </S.Container>
