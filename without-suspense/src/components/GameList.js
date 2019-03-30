@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "@reach/router";
 import { fetchGameList } from "../api/fetchGame";
 import { DevToolsContext } from "./DevTools";
-import { Loader } from "./Loader";
+import Loader from "./Loader";
 import * as S from "./styles";
 
 const GameItem = ({ game }) => (
@@ -12,7 +12,7 @@ const GameItem = ({ game }) => (
   </S.Item>
 );
 
-export class GameList extends Component {
+class GameList extends Component {
   state = {
     games: null,
     isLoading: true
@@ -46,3 +46,4 @@ export class GameList extends Component {
     );
   }
 }
+export default GameList;

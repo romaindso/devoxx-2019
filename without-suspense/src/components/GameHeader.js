@@ -1,11 +1,11 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { fetchGameDetails } from "../api/fetchGame";
 import { DevToolsContext } from "../components/DevTools";
-import { Loader } from "../components/Loader";
-import { Placeholder } from "../components/Placeholder";
+import Loader from "../components/Loader";
+import Placeholder from "../components/Placeholder";
 import * as S from "./styles";
 
-export class GameHeader extends Component {
+class GameHeader extends Component {
   state = {
     game: null,
     isLoading: true
@@ -33,17 +33,18 @@ export class GameHeader extends Component {
           {isLoading ? (
             <Loader />
           ) : (
-            <Fragment>
+            <>
               <S.GamePlatformWrapper>
                 {game.platforms.map(platform => (
                   <S.GamePlatform key={platform}>{platform}</S.GamePlatform>
                 ))}
               </S.GamePlatformWrapper>
               <p>{game.description}</p>
-            </Fragment>
+            </>
           )}
         </S.Container>
       </S.GameHeader>
     );
   }
 }
+export default GameHeader;

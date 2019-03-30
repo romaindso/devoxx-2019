@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Router } from "@reach/router";
-import { DevTools, DevToolsContext } from "./components/DevTools";
+import DevTools, { DevToolsContext } from "./components/DevTools";
 import Home from "./pages/Home";
 import GameDetails from "./pages/GameDetails";
 

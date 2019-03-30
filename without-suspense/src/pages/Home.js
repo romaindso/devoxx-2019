@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "../components/styles";
-import { GameList } from "../components/GameList";
-import controllerUrl from "../assets/others/icon_controller.png";
+import GameList from "../components/GameList";
+import controllerUrl from "../assets/others/icon-controller.png";
 
 const Home = () => (
   <S.Container>
@@ -14,4 +14,5 @@ const Home = () => (
     </S.CenterV>
   </S.Container>
 );
+
 export default Home;

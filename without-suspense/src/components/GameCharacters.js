@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { fetchGameCharacters } from "../api/fetchGame";
 import { DevToolsContext } from "../components/DevTools";
-import { Loader } from "../components/Loader";
+import Loader from "../components/Loader";
 import * as S from "./styles";
 
-export class GameCharacters extends Component {
+class GameCharacters extends Component {
   state = {
     characters: null,
     isLoading: true
@@ -31,7 +31,7 @@ export class GameCharacters extends Component {
         ) : (
           <S.GameCharactersWrapper>
             {characters.map((character, index) => (
-              <img src={character} key={index} />
+              <img src={character} key={index} alt="characters" />
             ))}
           </S.GameCharactersWrapper>
         )}
@@ -39,3 +39,5 @@ export class GameCharacters extends Component {
     );
   }
 }
+
+export default GameCharacters;
