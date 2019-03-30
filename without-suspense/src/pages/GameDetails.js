@@ -9,3 +9,4 @@ const GameDetails = ({ id, name }) => (
     <GameCharacters gameId={id} />
   </S.GameDetails>
 );
+export default GameDetails;
