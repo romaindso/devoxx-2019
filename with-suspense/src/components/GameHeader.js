@@ -1,50 +1,50 @@
-import React, { Component, Fragment, Suspense } from "react";
-import { unstable_createResource } from "react-cache";
+import React, { Component } from "react";
 import { fetchGameDetails } from "../api/fetchGame";
-import { Loader } from "../components/Loader";
-import { Placeholder } from "../components/Placeholder";
+import { DevToolsContext } from "../components/DevTools";
+import Loader from "../components/Loader";
+import Placeholder from "../components/Placeholder";
 import * as S from "./styles";
 
-const GameResource = unstable_createResource(fetchGameDetails);
+class GameHeader extends Component {
+  state = {
+    game: null,
+    isLoading: true
+  };
 
-const ImageResource = unstable_createResource(
-  src =>
-    new Promise(resolve => {
-      const img = new Image();
-      img.src = src;
-      img.onload = resolve;
-    })
-);
+  static contextType = DevToolsContext;
 
-const Img = ({ src, ...props }) => {
-  ImageResource.read(src);
-  return <S.GameImage src={src} {...props} />;
-};
+  componentDidMount() {
+    let delay = this.context;
+    fetchGameDetails(this.props.gameId, delay).then(
+      game => this.setState({ isLoading: false, game }),
+      error => this.setState({ isLoading: false, error })
+    );
+  }
 
-export class GameHeader extends Component {
   render() {
-    const { name, gameId } = this.props;
-    const game = GameResource.read(gameId);
+    const { game, isLoading } = this.state;
+    const { name } = this.props;
 
     return (
       <S.GameHeader>
-        <Suspense maxDuration={1000} fallback={<Placeholder />}>
-          <Img src={game.image_url} />
-        </Suspense>
+        {isLoading ? <Placeholder /> : <S.GameImage src={game.image_url} />}
         <S.Container>
           <h1>{name}</h1>
-          <Suspense maxDuration={1000} fallback={<Loader />}>
-            <Fragment>
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <>
               <S.GamePlatformWrapper>
                 {game.platforms.map(platform => (
                   <S.GamePlatform key={platform}>{platform}</S.GamePlatform>
                 ))}
               </S.GamePlatformWrapper>
               <p>{game.description}</p>
-            </Fragment>
-          </Suspense>
+            </>
+          )}
         </S.Container>
       </S.GameHeader>
     );
   }
 }
+export default GameHeader;

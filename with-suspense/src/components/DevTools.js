@@ -3,7 +3,7 @@ import * as S from "./styles";
 
 export const DevToolsContext = React.createContext();
 
-export class DevTools extends Component {
+class DevTools extends Component {
   render() {
     const { delay, setUpDelay } = this.props;
 
@@ -22,3 +22,4 @@ export class DevTools extends Component {
     );
   }
 }
+export default DevTools;

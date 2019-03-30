@@ -55,6 +55,12 @@ export const IconController = styled.img`
 `;
 
 // Conponents
+export const Menu = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+`;
+
 export const Title = styled.h1`
   font-size: 32px;
   display: flex;

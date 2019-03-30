@@ -1,41 +1,43 @@
-import React, { Component, Suspense } from "react";
-import { unstable_createResource } from "react-cache";
+import React, { Component } from "react";
 import { fetchGameCharacters } from "../api/fetchGame";
-import { Loader } from "../components/Loader";
+import { DevToolsContext } from "../components/DevTools";
+import Loader from "../components/Loader";
 import * as S from "./styles";
 
-const CharactersResource = unstable_createResource(fetchGameCharacters);
+class GameCharacters extends Component {
+  state = {
+    characters: null,
+    isLoading: true
+  };
 
-const ImageResource = unstable_createResource(
-  src =>
-    new Promise(resolve => {
-      const img = new Image();
-      img.src = src;
-      img.onload = resolve;
-    })
-);
+  static contextType = DevToolsContext;
 
-const Img = ({ src, ...props }) => {
-  ImageResource.read(src);
-  return <img src={src} {...props} />;
-};
+  componentDidMount() {
+    let delay = this.context;
+    fetchGameCharacters(this.props.gameId, delay).then(
+      characters => this.setState({ isLoading: false, characters }),
+      error => this.setState({ isLoading: false, error })
+    );
+  }
 
-export class GameCharacters extends Component {
   render() {
-    const { gameId } = this.props;
+    const { characters, isLoading } = this.state;
 
     return (
       <S.GameCharacters>
         <h2>Characters</h2>
-        {/* <Suspense maxDuration={1000} fallback={<Loader />}> */}
-        <S.GameCharactersWrapper>
-          {CharactersResource.read(gameId).map((character, index) => (
-            <img src={character} key={index} />
-            // <Img src={character} key={index} />
-          ))}
-        </S.GameCharactersWrapper>
-        {/* </Suspense> */}
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <S.GameCharactersWrapper>
+            {characters.map((character, index) => (
+              <img src={character} key={index} alt="characters" />
+            ))}
+          </S.GameCharactersWrapper>
+        )}
       </S.GameCharacters>
     );
   }
 }
+
+export default GameCharacters;
