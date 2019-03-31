@@ -14,9 +14,8 @@ class GameCharacters extends Component {
 
   componentDidMount() {
     let delay = this.context;
-    fetchGameCharacters(this.props.gameId, delay).then(
-      characters => this.setState({ isLoading: false, characters }),
-      error => this.setState({ isLoading: false, error })
+    fetchGameCharacters(this.props.gameId, delay).then(characters =>
+      this.setState({ isLoading: false, characters })
     );
   }
 

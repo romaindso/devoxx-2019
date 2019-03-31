@@ -22,9 +22,8 @@ class GameList extends Component {
 
   componentDidMount() {
     let delay = this.context;
-    fetchGameList(delay).then(
-      games => this.setState({ isLoading: false, games }),
-      error => this.setState({ isLoading: false, error })
+    fetchGameList(delay).then(games =>
+      this.setState({ isLoading: false, games })
     );
   }
 
