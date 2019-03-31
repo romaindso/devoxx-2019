@@ -1,9 +1,24 @@
-import React, { Component } from "react";
+import React, { Component, Suspense } from "react";
+import { unstable_createResource } from "react-cache";
 import { fetchGameDetails } from "../api/fetchGame";
 import { DevToolsContext } from "../components/DevTools";
 import Loader from "../components/Loader";
 import Placeholder from "../components/Placeholder";
 import * as S from "./styles";
+
+const ImageResource = unstable_createResource(
+  src =>
+    new Promise(resolve => {
+      const img = new Image();
+      img.src = src;
+      img.onload = resolve;
+    })
+);
+
+const Img = ({ src, ...props }) => {
+  ImageResource.read(src);
+  return <S.GameImage src={src} {...props} />;
+};
 
 class GameHeader extends Component {
   state = {
@@ -15,9 +30,8 @@ class GameHeader extends Component {
 
   componentDidMount() {
     let delay = this.context;
-    fetchGameDetails(this.props.gameId, delay).then(
-      game => this.setState({ isLoading: false, game }),
-      error => this.setState({ isLoading: false, error })
+    fetchGameDetails(this.props.gameId, delay).then(game =>
+      this.setState({ isLoading: false, game })
     );
   }
 
@@ -27,7 +41,11 @@ class GameHeader extends Component {
 
     return (
       <S.GameHeader>
-        {isLoading ? <Placeholder /> : <S.GameImage src={game.image_url} />}
+        {game && (
+          <Suspense maxDuration={500} fallback={<Placeholder />}>
+            <Img src={game.image_url} alt="game cover" />
+          </Suspense>
+        )}
         <S.Container>
           <h1>{name}</h1>
           {isLoading ? (
