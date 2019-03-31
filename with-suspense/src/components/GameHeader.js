@@ -15,9 +15,9 @@ const ImageResource = unstable_createResource(
     })
 );
 
-const Img = ({ src, ...props }) => {
+const Img = ({ src, alt, ...props }) => {
   ImageResource.read(src);
-  return <S.GameImage src={src} {...props} />;
+  return <S.GameImage src={src} alt={alt} {...props} />;
 };
 
 class GameHeader extends Component {
