@@ -1,7 +1,6 @@
 import React, { Component, Suspense } from "react";
 import { unstable_createResource } from "react-cache";
 import { fetchGameCharacters } from "../api/fetchGame";
-import { DevToolsContext } from "../components/DevTools";
 import Loader from "../components/Loader";
 import * as S from "./styles";
 
@@ -19,36 +18,22 @@ const Img = ({ src, alt, ...props }) => {
   return <img src={src} alt={alt} {...props} />;
 };
 
+const CharactersResource = unstable_createResource(fetchGameCharacters);
+
 class GameCharacters extends Component {
-  state = {
-    characters: null,
-    isLoading: true
-  };
-
-  static contextType = DevToolsContext;
-
-  componentDidMount() {
-    let delay = this.context;
-    fetchGameCharacters(this.props.gameId, delay).then(characters =>
-      this.setState({ isLoading: false, characters })
-    );
-  }
-
   render() {
-    const { characters } = this.state;
+    const { gameId } = this.props;
 
     return (
       <S.GameCharacters>
         <h2>Characters</h2>
-        {characters && (
-          <Suspense maxDuration={500} fallback={<Loader />}>
-            <S.GameCharactersWrapper>
-              {characters.map((character, index) => (
-                <Img src={character} key={index} alt="character" />
-              ))}
-            </S.GameCharactersWrapper>
-          </Suspense>
-        )}
+        <Suspense maxDuration={500} fallback={<Loader />}>
+          <S.GameCharactersWrapper>
+            {CharactersResource.read(gameId).map((character, index) => (
+              <Img src={character} key={index} alt="character" />
+            ))}
+          </S.GameCharactersWrapper>
+        </Suspense>
       </S.GameCharacters>
     );
   }

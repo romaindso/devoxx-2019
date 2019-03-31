@@ -22,6 +22,7 @@ class GameCharacters extends Component {
 
   render() {
     const { characters, isLoading } = this.state;
+    const { gameId } = this.props;
 
     return (
       <S.GameCharacters>
