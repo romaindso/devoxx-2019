@@ -1,10 +1,10 @@
 import React, { Component, Suspense } from "react";
 import { unstable_createResource } from "react-cache";
 import { fetchGameDetails } from "../api/fetchGame";
-import { DevToolsContext } from "../components/DevTools";
-import Loader from "../components/Loader";
 import Placeholder from "../components/Placeholder";
 import * as S from "./styles";
+
+const GameResource = unstable_createResource(fetchGameDetails);
 
 const ImageResource = unstable_createResource(
   src =>
@@ -34,37 +34,19 @@ const GameDescription = ({ game, name }) => (
 );
 
 class GameHeader extends Component {
-  state = {
-    game: null,
-    isLoading: true
-  };
-
-  static contextType = DevToolsContext;
-
-  componentDidMount() {
-    let delay = this.context;
-    fetchGameDetails(this.props.gameId, delay).then(game =>
-      this.setState({ isLoading: false, game })
-    );
-  }
-
   render() {
-    const { game, isLoading } = this.state;
-    const { name } = this.props;
+    const { name, gameId } = this.props;
+    const game = GameResource.read(gameId);
 
     return (
       <S.GameHeader>
         <h1>{name}</h1>
-        {isLoading ? (
-          <Loader />
-        ) : (
-          <S.RowNoWrap>
-            <Suspense maxDuration={500} fallback={<Placeholder />}>
-              <GameCover game={game} />
-            </Suspense>
-            <GameDescription game={game} name={name} />
-          </S.RowNoWrap>
-        )}
+        <S.RowNoWrap>
+          <Suspense maxDuration={1000} fallback={<Placeholder />}>
+            <GameCover game={game} />
+          </Suspense>
+          <GameDescription game={game} name={name} />
+        </S.RowNoWrap>
       </S.GameHeader>
     );
   }
