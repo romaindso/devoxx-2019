@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, Suspense } from "react";
+import { unstable_createResource } from "react-cache";
 import { Link } from "@reach/router";
 import { fetchGameList } from "../api/fetchGame";
-import { DevToolsContext } from "./DevTools";
 import Loader from "./Loader";
 import * as S from "./styles";
 
@@ -12,35 +12,21 @@ const GameItem = ({ game }) => (
   </S.Item>
 );
 
+const GamesResource = unstable_createResource(fetchGameList);
+
 class GameList extends Component {
-  state = {
-    games: null,
-    isLoading: true
-  };
-
-  static contextType = DevToolsContext;
-
-  componentDidMount() {
-    let delay = this.context;
-    fetchGameList(delay).then(games =>
-      this.setState({ isLoading: false, games })
-    );
-  }
-
   render() {
-    const { games, isLoading } = this.state;
+    const games = GamesResource.read();
 
     return (
       <S.List>
-        {isLoading ? (
-          <Loader />
-        ) : (
-          games.map(game => (
+        <Suspense maxDuration={500} fallback={<Loader />}>
+          {games.map(game => (
             <Link to={`/games/${game.id}/${game.name}`} key={game.id}>
               <GameItem game={game} />
             </Link>
-          ))
-        )}
+          ))}
+        </Suspense>
       </S.List>
     );
   }
