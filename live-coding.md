@@ -1,4 +1,4 @@
-# Demo
+# Live coding
 
 1. Enable concurrent mode in index.js
 2. Code splitting with React.lazy and Suspense in App.js
