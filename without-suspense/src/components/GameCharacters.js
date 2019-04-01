@@ -14,9 +14,8 @@ class GameCharacters extends Component {
 
   componentDidMount() {
     let delay = this.context;
-    fetchGameCharacters(this.props.gameId, delay).then(
-      characters => this.setState({ isLoading: false, characters }),
-      error => this.setState({ isLoading: false, error })
+    fetchGameCharacters(this.props.gameId, delay).then(characters =>
+      this.setState({ isLoading: false, characters })
     );
   }
 
@@ -30,11 +29,11 @@ class GameCharacters extends Component {
         {isLoading ? (
           <Loader />
         ) : (
-          <S.GameCharactersWrapper>
+          <S.Row>
             {characters.map((character, index) => (
-              <img src={character} key={index} alt="characters" />
+              <S.CharacterImage src={character} key={index} alt="characters" />
             ))}
-          </S.GameCharactersWrapper>
+          </S.Row>
         )}
       </S.GameCharacters>
     );

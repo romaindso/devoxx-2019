@@ -5,13 +5,13 @@ import controllerUrl from "../assets/others/icon-controller.png";
 
 const Home = () => (
   <S.Container>
-    <S.CenterV>
+    <S.Col>
       <S.Title>
         <S.IconController src={controllerUrl} />
         Your Games
       </S.Title>
       <GameList />
-    </S.CenterV>
+    </S.Col>
   </S.Container>
 );
 

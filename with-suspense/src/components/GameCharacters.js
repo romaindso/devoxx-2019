@@ -13,9 +13,9 @@ const ImageResource = unstable_createResource(
     })
 );
 
-const Img = ({ src, alt, ...props }) => {
+const Img = ({ src, ...props }) => {
   ImageResource.read(src);
-  return <img src={src} alt={alt} {...props} />;
+  return <S.CharacterImage src={src} {...props} />;
 };
 
 const CharactersResource = unstable_createResource(fetchGameCharacters);
@@ -28,11 +28,11 @@ class GameCharacters extends Component {
       <S.GameCharacters>
         <h2>Characters</h2>
         <Suspense maxDuration={500} fallback={<Loader />}>
-          <S.GameCharactersWrapper>
+          <S.Row>
             {CharactersResource.read(gameId).map((character, index) => (
               <Img src={character} key={index} alt="character" />
             ))}
-          </S.GameCharactersWrapper>
+          </S.Row>
         </Suspense>
       </S.GameCharacters>
     );

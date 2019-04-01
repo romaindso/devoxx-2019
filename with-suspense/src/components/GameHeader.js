@@ -15,10 +15,23 @@ const ImageResource = unstable_createResource(
     })
 );
 
-const Img = ({ src, alt, ...props }) => {
+const Img = ({ src, ...props }) => {
   ImageResource.read(src);
-  return <S.GameImage src={src} alt={alt} {...props} />;
+  return <S.GameImage src={src} {...props} />;
 };
+
+const GameCover = ({ game }) => <Img src={game.image_url} alt="game cover" />;
+
+const GameDescription = ({ game, name }) => (
+  <S.Container>
+    <S.Row>
+      {game.platforms.map(platform => (
+        <S.GamePlatform key={platform}>{platform}</S.GamePlatform>
+      ))}
+    </S.Row>
+    <p>{game.description}</p>
+  </S.Container>
+);
 
 class GameHeader extends Component {
   state = {
@@ -41,26 +54,17 @@ class GameHeader extends Component {
 
     return (
       <S.GameHeader>
-        {game && (
-          <Suspense maxDuration={500} fallback={<Placeholder />}>
-            <Img src={game.image_url} alt="game cover" />
-          </Suspense>
+        <h1>{name}</h1>
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <S.RowNoWrap>
+            <Suspense maxDuration={500} fallback={<Placeholder />}>
+              <GameCover game={game} />
+            </Suspense>
+            <GameDescription game={game} name={name} />
+          </S.RowNoWrap>
         )}
-        <S.Container>
-          <h1>{name}</h1>
-          {isLoading ? (
-            <Loader />
-          ) : (
-            <>
-              <S.GamePlatformWrapper>
-                {game.platforms.map(platform => (
-                  <S.GamePlatform key={platform}>{platform}</S.GamePlatform>
-                ))}
-              </S.GamePlatformWrapper>
-              <p>{game.description}</p>
-            </>
-          )}
-        </S.Container>
       </S.GameHeader>
     );
   }

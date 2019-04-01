@@ -7,14 +7,20 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
-export const CenterH = styled.div`
+export const RowNoWrap = styled.div`
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
+  flex-flow: row nowrap;
+  align-items: flex-start;
 `;
 
-export const CenterV = styled.div`
+export const Row = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+`;
+
+export const Col = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,6 +65,8 @@ export const Menu = styled.div`
   position: absolute;
   left: 0;
   top: 0;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
 `;
 
 export const Title = styled.h1`
@@ -99,9 +107,6 @@ export const GameCover = styled.img`
 export const GameDetails = styled.div``;
 
 export const GameHeader = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   padding-top: 72px;
 
   p {
@@ -118,7 +123,7 @@ export const GameImage = styled.img`
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
 `;
 
-export const GamePlatformWrapper = styled(CenterH)`
+export const GamePlatformWrapper = styled(Row)`
   justify-content: flex-start;
 `;
 
@@ -136,30 +141,18 @@ export const GamePlatform = styled.div`
   text-transform: uppercase;
 `;
 
-export const GameCharacters = styled(CenterH)`
-  justify-content: flex-start;
-
+export const GameCharacters = styled(Row)`
   h2 {
     margin: 0 0 16px;
     width: 100%;
   }
 `;
 
-export const GameCharactersWrapper = styled(CenterH)`
-  justify-content: flex-start;
-
-  img {
-    width: 80px;
-    border-radius: 8px;
-    margin: 0 8px 8px;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
-  }
-`;
-
-export const GameVideos = styled(GameCharacters)``;
-
-export const GameVideosWrapper = styled(CenterH)`
-  justify-content: flex-start;
+export const CharacterImage = styled.img`
+  width: 80px;
+  border-radius: 8px;
+  margin: 0 8px 8px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
 `;
 
 export const DevTools = styled.div`

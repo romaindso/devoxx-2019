@@ -5,6 +5,21 @@ import Loader from "../components/Loader";
 import Placeholder from "../components/Placeholder";
 import * as S from "./styles";
 
+const GameCover = ({ game }) => (
+  <S.GameImage src={game.image_url} alt="game cover" />
+);
+
+const GameDescription = ({ game, name }) => (
+  <S.Container>
+    <S.Row>
+      {game.platforms.map(platform => (
+        <S.GamePlatform key={platform}>{platform}</S.GamePlatform>
+      ))}
+    </S.Row>
+    <p>{game.description}</p>
+  </S.Container>
+);
+
 class GameHeader extends Component {
   state = {
     game: null,
@@ -15,9 +30,8 @@ class GameHeader extends Component {
 
   componentDidMount() {
     let delay = this.context;
-    fetchGameDetails(this.props.gameId, delay).then(
-      game => this.setState({ isLoading: false, game }),
-      error => this.setState({ isLoading: false, error })
+    fetchGameDetails(this.props.gameId, delay).then(game =>
+      this.setState({ isLoading: false, game })
     );
   }
 
@@ -27,22 +41,20 @@ class GameHeader extends Component {
 
     return (
       <S.GameHeader>
-        {isLoading ? <Placeholder /> : <S.GameImage src={game.image_url} />}
-        <S.Container>
-          <h1>{name}</h1>
+        <h1>{name}</h1>
+        <S.RowNoWrap>
           {isLoading ? (
-            <Loader />
+            <>
+              <Placeholder />
+              <Loader />
+            </>
           ) : (
             <>
-              <S.GamePlatformWrapper>
-                {game.platforms.map(platform => (
-                  <S.GamePlatform key={platform}>{platform}</S.GamePlatform>
-                ))}
-              </S.GamePlatformWrapper>
-              <p>{game.description}</p>
+              <GameCover game={game} />
+              <GameDescription game={game} name={name} />
             </>
           )}
-        </S.Container>
+        </S.RowNoWrap>
       </S.GameHeader>
     );
   }
