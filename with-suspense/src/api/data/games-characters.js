@@ -14,10 +14,6 @@ export default {
       require(`../../assets/avatars/assassins-creed-odyssey/335_146_146.png`)
     ]
   },
-  thedivion2: {
-    id: "thedivion2",
-    characters: []
-  },
   rainbowsiege: {
     id: "rainbowsiege",
     characters: [
@@ -32,10 +28,6 @@ export default {
       require(`../../assets/avatars/rainbow-six-siege/287_146_146.png`),
       require(`../../assets/avatars/rainbow-six-siege/288_146_146.png`)
     ]
-  },
-  anno1800: {
-    id: "anno1800",
-    characters: []
   },
   farcry5: {
     id: "farcry5",
