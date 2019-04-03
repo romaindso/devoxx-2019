@@ -1,8 +1,7 @@
-import React, { Component, Suspense } from "react";
+import React, { Component } from "react";
 import { unstable_createResource } from "react-cache";
 import { Link } from "@reach/router";
 import { fetchGameList } from "../api/fetchGame";
-import Loader from "./Loader";
 import * as S from "./styles";
 
 const GameItem = ({ game }) => (
