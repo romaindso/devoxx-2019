@@ -5,5 +5,5 @@
 3. Assets loading with Suspense in GameCharacters.js
 4. Assets loading with Suspense in GameHeader.js
 5. Data loading with Suspense in GameCharacters.js
-6. Data loading with Suspense in GameList.js
+6. Data loading with Suspense in GameList.js / Suspense handler in Home.js
 7. Disable concurrent mode in index.js

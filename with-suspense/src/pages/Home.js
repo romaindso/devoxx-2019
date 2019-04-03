@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Suspense } from "react";
 import * as S from "../components/styles";
 import GameList from "../components/GameList";
+import Loader from "../components/Loader";
 import controllerUrl from "../assets/others/icon-controller.png";
 
 const Home = () => (
@@ -10,7 +11,9 @@ const Home = () => (
         <S.IconController src={controllerUrl} />
         Your Games
       </S.Title>
-      <GameList />
+      <Suspense maxDuration={500} fallback={<Loader />}>
+        <GameList />
+      </Suspense>
     </S.Col>
   </S.Container>
 );
