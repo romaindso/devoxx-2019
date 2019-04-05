@@ -22,7 +22,7 @@ const Img = ({ src, ...props }) => {
 
 const GameCover = ({ game }) => <Img src={game.image_url} alt="game cover" />;
 
-const GameDescription = ({ game, name }) => (
+const GameDescription = ({ game }) => (
   <S.Container>
     <S.Row>
       {game.platforms.map(platform => (
@@ -35,17 +35,16 @@ const GameDescription = ({ game, name }) => (
 
 class GameHeader extends Component {
   render() {
-    const { name, gameId } = this.props;
+    const { gameId } = this.props;
     const game = GameResource.read(gameId);
 
     return (
       <S.GameHeader>
-        <h1>{name}</h1>
         <S.RowNoWrap>
           <Suspense maxDuration={1000} fallback={<Placeholder />}>
             <GameCover game={game} />
           </Suspense>
-          <GameDescription game={game} name={name} />
+          <GameDescription game={game} />
         </S.RowNoWrap>
       </S.GameHeader>
     );
