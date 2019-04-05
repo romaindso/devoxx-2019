@@ -23,11 +23,9 @@ class GameList extends Component {
     return (
       <S.List>
         {games.map(game => (
-          <>
-            <Link to={`/games/${game.id}/${game.name}`} key={game.id}>
-              <GameItem game={game} />
-            </Link>
-          </>
+          <Link to={`/games/${game.id}/${game.name}`} key={game.id}>
+            <GameItem game={game} />
+          </Link>
         ))}
       </S.List>
     );
