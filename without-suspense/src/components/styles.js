@@ -38,15 +38,15 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
+  position: relative;
   list-style-type: none;
   background: white;
   color: #24a29a;
   padding: 16px;
-  margin: 0 0 8px;
+  margin: 8px 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-bottom: 1px solid #eee;
 
   &:hover {
     cursor: pointer;
@@ -56,7 +56,7 @@ export const Item = styled.li`
 
 // Icons
 export const IconController = styled.img`
-  width: 60px;
+  width: 72px;
   margin-right: 8px;
 `;
 
@@ -65,12 +65,23 @@ export const Menu = styled.div`
   position: absolute;
   left: 0;
   top: 0;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
+
+  a {
+    position: relative;
+    display: block;
+    height: 100%;
+  }
 `;
 
-export const Title = styled.h1`
-  font-size: 32px;
+export const HomeTitleWrapper = styled.div`
+  width: 50%;
+  position: relative;
+  margin: 32px 0;
+`;
+
+export const HomeTitle = styled.h1`
+  font-size: 48px;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,7 +105,6 @@ export const Placeholder = styled.div`
 `;
 
 export const GameTitle = styled.h1`
-  font-size: 24px;
   color: #333;
 `;
 
@@ -104,11 +114,11 @@ export const GameCover = styled.img`
   margin-right: 32px;
 `;
 
-export const GameDetails = styled.div``;
+export const GameDetails = styled.div`
+  margin-top: 112px;
+`;
 
 export const GameHeader = styled.div`
-  padding-top: 72px;
-
   p {
     font-size: 18px;
     font-weight: normal;
@@ -129,13 +139,13 @@ export const GamePlatformWrapper = styled(Row)`
 
 export const GamePlatform = styled.div`
   display: inline-block;
-  padding: 0.25em 0.5em;
+  padding: 0.3em 0.8em;
   margin-right: 8px;
   color: white;
   border: 1px solid white;
   border-radius: 0.28em;
   background: rgba(34, 34, 34, 0.4);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 1.14em;
   text-transform: uppercase;

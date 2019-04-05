@@ -9,7 +9,7 @@ const GameCover = ({ game }) => (
   <S.GameImage src={game.image_url} alt="game cover" />
 );
 
-const GameDescription = ({ game, name }) => (
+const GameDescription = ({ game }) => (
   <S.Container>
     <S.Row>
       {game.platforms.map(platform => (
@@ -37,11 +37,9 @@ class GameHeader extends Component {
 
   render() {
     const { game, isLoading } = this.state;
-    const { name } = this.props;
 
     return (
       <S.GameHeader>
-        <h1>{name}</h1>
         <S.RowNoWrap>
           {isLoading ? (
             <>
@@ -51,7 +49,7 @@ class GameHeader extends Component {
           ) : (
             <>
               <GameCover game={game} />
-              <GameDescription game={game} name={name} />
+              <GameDescription game={game} />
             </>
           )}
         </S.RowNoWrap>
