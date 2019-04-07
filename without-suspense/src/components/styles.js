@@ -74,7 +74,7 @@ export const Menu = styled.div`
 `;
 
 export const HomeTitleWrapper = styled.div`
-  width: 50%;
+  width: 80%;
   position: relative;
   margin: 32px 0;
 `;
