@@ -177,7 +177,7 @@ export const DevTools = styled.div`
   right: 0;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 16px;
+  padding: 12px;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
 
   input {
