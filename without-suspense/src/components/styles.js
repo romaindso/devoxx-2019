@@ -74,13 +74,13 @@ export const Menu = styled.div`
 `;
 
 export const HomeTitleWrapper = styled.div`
-  width: 80%;
+  display: flex;
   position: relative;
-  margin: 32px 0;
+  margin: 64px 0 32px 0;
 `;
 
 export const HomeTitle = styled.h1`
-  font-size: 48px;
+  font-size: 32px;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -104,11 +104,17 @@ export const Placeholder = styled.div`
   background-color: rgba(34, 34, 34, 0.4);
 `;
 
-export const GameTitle = styled.h1`
+export const GameItemTitle = styled.h1`
+  font-size: 24px;
   color: #333;
 `;
 
-export const GameCover = styled.img`
+export const GameTitle = styled.h1`
+  font-size: 32px;
+  color: #333;
+`;
+
+export const GameItemCover = styled.img`
   width: 128px;
   border-radius: 8px;
   margin-right: 32px;
@@ -127,8 +133,8 @@ export const GameHeader = styled.div`
 `;
 
 export const GameImage = styled.img`
-  width: 256px;
-  margin: 0 32px 32px 0;
+  width: 216px;
+  margin: 0 16px 16px 0;
   border-radius: 16px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
 `;
@@ -139,7 +145,7 @@ export const GamePlatformWrapper = styled(Row)`
 
 export const GamePlatform = styled.div`
   display: inline-block;
-  padding: 0.3em 0.8em;
+  padding: 0.3em 0.6em;
   margin-right: 8px;
   color: white;
   border: 1px solid white;
