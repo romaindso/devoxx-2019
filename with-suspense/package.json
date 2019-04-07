@@ -1,7 +1,12 @@
 {
   "name": "with-suspense",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Romain Durand Saint Omer",
+    "email": "romain.dso@gmail.com"
+  },
   "dependencies": {
     "@reach/router": "^1.2.1",
     "react-scripts": "2.1.8",
