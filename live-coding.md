@@ -1,10 +1,22 @@
 # Live coding
 
-1. Enable concurrent mode in index.js
-2. Code splitting with React.lazy and Suspense in App.js
-3. Assets loading with Suspense in GameCharacters.js
-4. Assets loading with Suspense in GameHeader.js
-5. Data loading with Suspense in GameCharacters.js
-6. Data loading with Suspense in GameHeader.js / Suspense handler in GameDetails.js
-7. Data loading with Suspense in GameList.js / Suspense handler in Home.js
-8. Disable concurrent mode in index.js
+## Concurrent mode
+
+Enable concurrent mode in `index.js`
+
+## Code splitting
+
+Use with React.lazy and Suspense in App.js for routes.
+
+> Show chunks in Chrome Devtools.
+
+## Assets loading with Suspense
+
+1. `GameCharacters.js`
+   > In Chrome Devtools, increase latency to show images that pop up in different timeline.
+
+## Data loading with Suspense
+
+1. `GameCharacters.js`
+2. `GameList.js`
+   > Suspense handler in Home.js
