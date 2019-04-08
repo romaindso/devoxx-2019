@@ -19,5 +19,6 @@ Use with React.lazy and Suspense in App.js for routes.
 
 1. `GameCharacters.js`
    > In Chrome Devtools, increase latency to show that Suspense fallback to the loader if it's longuer than `maxDuration`props
+   > Now data is cached
 2. `GameList.js`
    > Suspense handler in Home.js
