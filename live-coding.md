@@ -18,5 +18,6 @@ Use with React.lazy and Suspense in App.js for routes.
 ## Data loading with Suspense
 
 1. `GameCharacters.js`
+   > In Chrome Devtools, increase latency to show that Suspense fallback to the loader if it's longuer than `maxDuration`props
 2. `GameList.js`
    > Suspense handler in Home.js
