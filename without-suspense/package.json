@@ -1,8 +1,7 @@
 {
   "name": "without-suspense",
   "version": "1.0.0",
-  "private": true,
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENCE.md",
   "author": {
     "name": "Romain Durand Saint Omer",
     "email": "romain.dso@gmail.com"
