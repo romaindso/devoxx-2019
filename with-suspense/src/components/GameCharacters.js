@@ -13,9 +13,9 @@ const ImageResource = unstable_createResource(
     })
 );
 
-const Img = ({ src, ...props }) => {
+const Img = ({ src, alt, ...props }) => {
   ImageResource.read(src);
-  return <S.CharacterImage src={src} {...props} />;
+  return <img src={src} alt={alt} {...props} />;
 };
 
 const CharactersResource = unstable_createResource(fetchGameCharacters);

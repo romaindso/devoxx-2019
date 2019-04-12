@@ -4,7 +4,7 @@ import loaderUrl from "../assets/others/icon-loader.svg";
 
 const Loader = () => (
   <S.Loader>
-    <img src={loaderUrl} alt="loader" />
+    <img src={loaderUrl} alt="loader" className="loader" />
   </S.Loader>
 );
 

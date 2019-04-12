@@ -21,7 +21,6 @@ class GameCharacters extends Component {
 
   render() {
     const { characters, isLoading } = this.state;
-    const { gameId } = this.props;
 
     return (
       <S.GameCharacters>
@@ -31,7 +30,7 @@ class GameCharacters extends Component {
         ) : (
           <S.Row>
             {characters.map((character, index) => (
-              <S.CharacterImage src={character} key={index} alt="characters" />
+              <img src={character} key={index} alt="characters" />
             ))}
           </S.Row>
         )}

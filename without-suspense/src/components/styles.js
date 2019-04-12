@@ -162,13 +162,13 @@ export const GameCharacters = styled(Row)`
     margin: 0 0 16px;
     width: 100%;
   }
-`;
 
-export const CharacterImage = styled.img`
-  width: 80px;
-  border-radius: 8px;
-  margin: 0 8px 8px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+  img:not(.loader) {
+    width: 80px;
+    border-radius: 8px;
+    margin: 0 8px 8px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+  }
 `;
 
 export const DevTools = styled.div`
