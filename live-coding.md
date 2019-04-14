@@ -8,7 +8,7 @@ Enable concurrent mode in `index.js`
 
 Use with React.lazy and Suspense in App.js for routes.
 
-> Show chunks in Chrome Devtools.
+> Show chunks in Chrome Devtools before/after.
 
 ## Assets loading with Suspense
 
