@@ -1,4 +1,4 @@
-# Améliorez la performance et l'UX de vos app avec React Suspense
+# Better UX and app performance with React Suspense
 By [Romain Durand Saint Omer](https://twitter.com/romaindso) at [Devoxx 2019](https://www.devoxx.fr/).
 
 ---
